@@ -366,6 +366,119 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
 .viewers-row{display:flex;align-items:center;gap:6px;font-size:11px;color:#888;margin-bottom:10px;}
 .vdot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 1s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ══ ANNOUNCEMENT BAR ══ */
+.ann-bar{background:linear-gradient(90deg,#8B0000,#cc0c39,#8B0000);padding:9px 20px;
+  text-align:center;font-size:12px;font-weight:700;color:white;letter-spacing:.5px;
+  display:flex;align-items:center;justify-content:center;gap:12px;overflow:hidden;position:relative;}
+.ann-bar span{animation:slide-ann 20s linear infinite;}
+@keyframes slide-ann{0%{transform:translateX(0)}50%{transform:translateX(-30px)}100%{transform:translateX(0)}}
+.ann-close{position:absolute;right:14px;background:none;border:none;color:white;
+  font-size:16px;cursor:pointer;opacity:.7;}
+
+/* ══ CATEGORY GRID ══ */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;
+  padding:0 0 20px;}
+.cat-card{background:linear-gradient(145deg,#1a1a1a,#111);border:1px solid #222;
+  border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s;}
+.cat-card:hover{border-color:var(--gold);transform:translateY(-4px);background:linear-gradient(145deg,#1a1200,#111);}
+.cat-card .cc-icon{font-size:32px;margin-bottom:8px;}
+.cat-card .cc-name{font-size:11px;font-weight:700;color:#888;}
+.cat-card:hover .cc-name{color:var(--gold);}
+
+/* ══ SECTION TITLES ══ */
+.sec-title{display:flex;align-items:center;justify-content:space-between;padding:20px 0 14px;}
+.sec-title-left{display:flex;align-items:center;gap:10px;}
+.sec-title-left h2{font-size:20px;font-weight:900;color:white;}
+.sec-title-left h2 span{color:var(--gold);}
+.sec-badge{background:linear-gradient(90deg,#cc0c39,#ff2d55);color:white;padding:3px 10px;
+  border-radius:20px;font-size:10px;font-weight:800;}
+.view-all{color:var(--gold);font-size:12px;font-weight:700;cursor:pointer;border:1px solid #d4a01740;
+  padding:6px 14px;border-radius:20px;transition:all .2s;}
+.view-all:hover{background:#1a1200;}
+
+/* ══ FLASH SALE BAR ══ */
+.flash-bar{background:linear-gradient(90deg,#1a0000,#2a0000,#1a0000);
+  border:1px solid #cc0c3940;border-radius:12px;padding:14px 20px;margin-bottom:20px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.flash-left{display:flex;align-items:center;gap:12px;}
+.flash-icon{font-size:28px;animation:pulse-r 1s infinite;}
+@keyframes pulse-r{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.flash-text h3{font-size:16px;font-weight:900;color:#ff4444;}
+.flash-text p{font-size:11px;color:#ff6b6b;}
+.flash-timer{display:flex;align-items:center;gap:6px;}
+.ft-box{background:#1a0000;border:1px solid #cc0c3966;border-radius:7px;padding:6px 10px;
+  text-align:center;min-width:46px;}
+.ft-num{font-size:20px;font-weight:900;color:#ff4444;line-height:1;}
+.ft-label{font-size:8px;color:#884444;text-transform:uppercase;margin-top:1px;}
+.ft-sep{font-size:20px;font-weight:900;color:#ff4444;}
+
+/* ══ HORIZONTAL SCROLL SECTION ══ */
+.hscroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;}
+.hscroll::-webkit-scrollbar{height:3px;}
+.hscroll::-webkit-scrollbar-thumb{background:#d4a017;border-radius:2px;}
+.hscroll .pcard{min-width:200px;scroll-snap-align:start;flex-shrink:0;}
+
+/* ══ SOCIAL PROOF POPUP ══ */
+.sp-popup{position:fixed;bottom:80px;left:18px;background:#111;border:1px solid #d4a01740;
+  border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;
+  z-index:700;transform:translateX(-200%);transition:transform .4s;max-width:280px;
+  box-shadow:0 8px 30px rgba(0,0,0,.6);}
+.sp-popup.show{transform:translateX(0);}
+.sp-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.sp-text{font-size:11px;color:#ccc;line-height:1.5;}
+.sp-text strong{color:white;}
+.sp-text .sp-time{font-size:10px;color:#555;margin-top:2px;}
+
+/* ══ SKELETON LOADING ══ */
+.skeleton{background:linear-gradient(90deg,#111 25%,#1a1a1a 50%,#111 75%);
+  background-size:200% 100%;animation:skel 1.5s infinite;border-radius:8px;}
+@keyframes skel{0%{background-position:200%}100%{background-position:-200%}}
+.skel-card{background:#111;border-radius:12px;border:1px solid #1a1a1a;overflow:hidden;}
+.skel-img{height:190px;}.skel-line{height:12px;margin:8px 10px;border-radius:4px;}
+.skel-line.short{width:60%;margin-top:5px;}
+.skel-btn{height:32px;margin:6px 10px 10px;border-radius:6px;}
+
+/* ══ BANNER STRIP ══ */
+.trust-strip{background:linear-gradient(90deg,#0a0a0a,#150f00,#0a0a0a);
+  padding:14px 20px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
+  border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;}
+.ts-item{display:flex;align-items:center;gap:8px;}
+.ts-icon{font-size:20px;}
+.ts-text{font-size:11px;color:#777;}
+.ts-text strong{color:var(--gold);display:block;font-size:12px;}
+
+/* ══ NEWSLETTER ══ */
+.newsletter{background:linear-gradient(135deg,#1a0f00,#0d0d0d);
+  border:1px solid #d4a01730;border-radius:16px;padding:30px;text-align:center;margin:20px 0;}
+.newsletter h3{font-size:20px;font-weight:900;color:white;margin-bottom:6px;}
+.newsletter p{font-size:13px;color:#666;margin-bottom:18px;}
+.nl-form{display:flex;gap:8px;max-width:400px;margin:0 auto;}
+.nl-form input{flex:1;padding:11px 16px;background:#111;border:1.5px solid #333;
+  border-radius:8px;color:white;font-size:13px;outline:none;}
+.nl-form input:focus{border-color:var(--gold);}
+.nl-btn{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#000;padding:11px 20px;
+  border:none;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;}
+
+/* ══ REVIEW STARS ══ */
+.prating{display:flex;align-items:center;gap:4px;margin-bottom:4px;}
+.prating .stars{color:var(--gold);font-size:11px;letter-spacing:-1px;}
+.prating .rcount{font-size:10px;color:#555;}
+
+/* ══ PRODUCT CARD ENHANCEMENTS ══ */
+.pcard .pwish{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);
+  color:#888;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;
+  font-size:14px;display:flex;align-items:center;justify-content:center;z-index:3;
+  transition:all .2s;}
+.pcard .pwish:hover,.pcard .pwish.on{color:#ef4444;}
+.pcard .sold-bar{font-size:9px;color:#ff6b6b;font-weight:700;margin-bottom:5px;}
+
+@media(max-width:600px){
+  .cat-grid{grid-template-columns:repeat(4,1fr);}
+  .flash-bar{flex-direction:column;align-items:flex-start;}
+  .nl-form{flex-direction:column;}
+}
 </style>
 </head>
 <body>
@@ -385,6 +498,12 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
   </div>
   <div class="nav-cats" id="catBar"></div>
 </nav>
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar" id="annBar">
+  <span>🎉 EID SPECIAL SALE — Sab products pe 20-70% OFF! 🚚 FREE Delivery PKR 2000+ ke orders pe | COD Available All Pakistan</span>
+  <button class="ann-close" onclick="document.getElementById('annBar').style.display='none'">✕</button>
+</div>
+
 <div class="hero">
   <div class="hero-content">
     <div class="hero-tag">✨ PAKISTAN KA #1 LUXURY STORE</div>
@@ -402,16 +521,64 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
     </div>
   </div>
 </div>
-<div class="trust">
-  <div class="trust-item"><span>🚚</span><div><strong>3-6 Days Delivery</strong><br>PKR 200 All Pakistan</div></div>
-  <div class="trust-item"><span>💰</span><div><strong>Cash on Delivery</strong><br>Pay when delivered</div></div>
-  <div class="trust-item"><span>🔄</span><div><strong>Easy Returns</strong><br>7 day policy</div></div>
-  <div class="trust-item"><span>⭐</span><div><strong>100% Original</strong><br>Quality guaranteed</div></div>
-  <div class="trust-item"><span>💬</span><div><strong>Live Chat</strong><br>24/7 support</div></div>
+<div class="trust-strip">
+  <div class="ts-item"><div class="ts-icon">🚚</div><div class="ts-text"><strong>3-6 Days Delivery</strong>All Pakistan — PKR 200</div></div>
+  <div class="ts-item"><div class="ts-icon">💰</div><div class="ts-text"><strong>Cash on Delivery</strong>Pay when it arrives</div></div>
+  <div class="ts-item"><div class="ts-icon">🔄</div><div class="ts-text"><strong>Easy Returns</strong>7 day hassle-free</div></div>
+  <div class="ts-item"><div class="ts-icon">🛡️</div><div class="ts-text"><strong>100% Original</strong>Quality guaranteed</div></div>
+  <div class="ts-item"><div class="ts-icon">⭐</div><div class="ts-text"><strong>50,000+ Happy</strong>Customers</div></div>
 </div>
 <div class="store-wrap" id="prods">
-  <div class="sec-hdr"><h2 id="secTitle">✨ <span>Featured</span> Products</h2></div>
+
+  <!-- CATEGORY QUICK ACCESS -->
+  <div class="sec-title">
+    <div class="sec-title-left"><h2>🏪 Shop By <span>Category</span></h2></div>
+  </div>
+  <div class="cat-grid" id="catGrid"></div>
+
+  <!-- FLASH SALE -->
+  <div class="flash-bar">
+    <div class="flash-left">
+      <div class="flash-icon">⚡</div>
+      <div class="flash-text">
+        <h3>FLASH SALE — Aaj Ka Offer!</h3>
+        <p>Limited time — stock khatam hone se pehle order karo!</p>
+      </div>
+    </div>
+    <div class="flash-timer">
+      <div class="ft-box"><div class="ft-num" id="fh">00</div><div class="ft-label">Hours</div></div>
+      <div class="ft-sep">:</div>
+      <div class="ft-box"><div class="ft-num" id="fm">00</div><div class="ft-label">Mins</div></div>
+      <div class="ft-sep">:</div>
+      <div class="ft-box"><div class="ft-num" id="fs">00</div><div class="ft-label">Secs</div></div>
+    </div>
+  </div>
+
+  <!-- ALL PRODUCTS GRID -->
+  <div class="sec-title">
+    <div class="sec-title-left">
+      <h2 id="secTitle">✨ <span>Featured</span> Products</h2>
+    </div>
+    <span id="prodCount2" style="font-size:12px;color:#555;"></span>
+  </div>
+
+  <!-- SKELETON LOADER -->
+  <div class="grid" id="skelGrid" style="display:none;">
+    ${[...Array(10)].map(()=>`<div class="skel-card"><div class="skel-img skeleton"></div><div class="skel-line skeleton"></div><div class="skel-line short skeleton"></div><div class="skel-btn skeleton"></div></div>`).join('')}
+  </div>
+
   <div class="grid" id="grid"></div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <h3>📧 Special Offers Pao — Email Pe!</h3>
+    <p>Exclusive deals, new arrivals & flash sales — sabse pehle aapko!</p>
+    <div class="nl-form">
+      <input type="email" id="nlEmail" placeholder="Apni email daalo...">
+      <button class="nl-btn" onclick="subNewsletter()">Subscribe 🎁</button>
+    </div>
+  </div>
+
 </div>
 <footer>
   <div class="f-logo">Nest<span>Kart</span> PK</div>
@@ -422,6 +589,15 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
   <div class="chat-box" id="chatBox"><div id="chatScreen"></div></div>
   <button class="chat-toggle" onclick="toggleChat()">💬<span class="chat-notif" id="chatNotif">!</span></button>
 </div>
+<div class="sp-popup" id="spPopup">
+  <div class="sp-avatar" id="spAvatar">👤</div>
+  <div class="sp-text">
+    <div><strong id="spName">Ahmed</strong> ne abhi order kiya!</div>
+    <div id="spProduct" style="color:var(--gold);font-size:10px;"></div>
+    <div class="sp-time" id="spTime">2 minute pehle</div>
+  </div>
+</div>
+
 </div>
 
 <!-- DETAIL PAGE -->
@@ -750,17 +926,20 @@ async function loadFromFirebase(){
     const oSnap=await window.fsDocs(window.fsCollection(window.db,'orders'));
     orders=oSnap.docs.map(d=>({...d.data(),_docId:d.id}));
     orders.sort((a,b)=>b.id-a.id);
-    buildCats();renderGrid(prods);updateCartCounts();
-    // ✅ FIX: Handle URL after data loads
+    buildCats();renderGrid(prods);renderSections();updateCartCounts();
     handleURL();
+    // Social proof popup
+    setTimeout(startSocialProof, 4000);
   }catch(e){console.log('Firebase load error:',e);}
 }
 
-window.addEventListener('firebaseReady',()=>{
+// ✅ FIXED: Handle race condition — check if already fired
+function initFirebase(){
   loadFromFirebase();
   window.fsOnSnapshot(window.fsCollection(window.db,'products'),snap=>{
     prods=snap.docs.map(d=>({...d.data(),_docId:d.id}));
     renderGrid(getCurProds());
+    renderSections();
     if(document.getElementById('prodTable'))renderProdTable();
     updateStats();
   });
@@ -770,7 +949,13 @@ window.addEventListener('firebaseReady',()=>{
     if(document.getElementById('ordTable'))renderOrdTable();
     updateStats();
   });
-});
+}
+// Check if Firebase already ready (race condition fix)
+if(window.firebaseReady && window.db){ initFirebase(); }
+else { window.addEventListener('firebaseReady', initFirebase); }
+// Extra safety fallback — retry after 2s
+setTimeout(()=>{ if(prods.length===0 && window.db){ loadFromFirebase(); } }, 2000);
+setTimeout(()=>{ if(prods.length===0 && window.db){ loadFromFirebase(); } }, 5000);
 
 function saveC(){localStorage.setItem('nk3_cart',JSON.stringify(cart));}
 function saveCH(){localStorage.setItem('nk3_chats',JSON.stringify(chats));}
