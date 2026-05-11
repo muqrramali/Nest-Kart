@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NestKart PK — Pakistan Ka #1 Smart Home & Fashion Store</title>
+
+<!-- ✅ FAVICON — Browser Tab Pe N Logo -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230a0a0a'/><rect x='2' y='2' width='60' height='60' rx='10' fill='none' stroke='%23d4a017' stroke-width='3'/><text x='32' y='46' font-family='Arial Black,sans-serif' font-size='38' font-weight='900' fill='%23d4a017' text-anchor='middle'>N</text><circle cx='50' cy='14' r='5' fill='%23f0c040'/></svg>" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230a0a0a'/><rect x='2' y='2' width='60' height='60' rx='10' fill='none' stroke='%23d4a017' stroke-width='3'/><text x='32' y='46' font-family='Arial Black,sans-serif' font-size='38' font-weight='900' fill='%23d4a017' text-anchor='middle'>N</text><circle cx='50' cy='14' r='5' fill='%23f0c040'/></svg>">
+<meta name="theme-color" content="#d4a017">
+<meta property="og:title" content="NestKart PK — Pakistan Ka #1 Smart Store">
+<meta property="og:description" content="Premium Products. Cash on Delivery. Fast Delivery All Over Pakistan.">
+
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
   import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc, onSnapshot, orderBy, query } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
@@ -130,7 +138,6 @@ input,select,textarea,button{font-family:'Poppins',sans-serif;}
 .pk-price{font-size:15px;font-weight:800;color:var(--gold);}
 .delivery-box{background:#0d1a0d;border:1px solid #1a3a1a;border-radius:8px;padding:12px;margin-bottom:14px;}
 .delivery-box p{font-size:12px;color:#4ade80;margin-bottom:3px;}
-/* buy-btn moved to new CSS */
 .cart-add-btn{width:100%;background:transparent;border:2px solid var(--gold);padding:12px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;color:var(--gold);}
 .desc-section{background:linear-gradient(145deg,#151515,#111);border-radius:14px;padding:20px;border:1px solid #222;margin-bottom:16px;}
 .desc-title{font-size:17px;font-weight:800;color:var(--gold);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #222;}
@@ -191,7 +198,7 @@ input,select,textarea,button{font-family:'Poppins',sans-serif;}
 .checkout-btn2{width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border:none;padding:13px;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer;margin-top:10px;color:#000;}
 .empty-c{text-align:center;padding:40px 20px;color:#444;}
 .empty-c span{font-size:50px;display:block;margin-bottom:8px;}
-.chat-widget{position:fixed;bottom:85px;right:18px;z-index:600;}
+.chat-widget{position:fixed;bottom:20px;right:20px;z-index:600;}
 .chat-toggle{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;width:52px;height:52px;border-radius:50%;border:none;font-size:22px;cursor:pointer;box-shadow:0 4px 20px #d4a01760;display:flex;align-items:center;justify-content:center;}
 .chat-box{position:absolute;bottom:60px;right:0;width:300px;background:#111;border:1px solid var(--gold);border-radius:14px;overflow:hidden;display:none;box-shadow:0 8px 30px rgba(0,0,0,.8);}
 .chat-box.open{display:block;}
@@ -303,28 +310,19 @@ tbody tr:hover td{background:#141414;}
 .toast.show{transform:translateX(0);opacity:1;}
 .toast.s{background:#0d1a0d;color:#4ade80;border-color:#4ade80;}
 .toast.e{background:#1a0d0d;color:#ef4444;border-color:#ef4444;}
-.fwa{position:fixed;bottom:18px;right:18px;background:#25D366;color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 18px rgba(37,211,102,.5);z-index:400;animation:bonce 2s infinite;}
+.fwa{display:none;}
 @keyframes bonce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 footer{background:#0d0d0d;border-top:1px solid #222;padding:30px 20px;text-align:center;}
 footer .f-logo{font-size:22px;font-weight:900;color:white;margin-bottom:8px;}
 footer .f-logo span{color:var(--gold);}
 footer p{color:#444;font-size:12px;margin-bottom:4px;}
-
-/* ===== PRICE INPUT FIELDS IN IMPORT PREVIEW ===== */
 .price-input-box{background:#111;border-radius:6px;padding:8px;}
 .price-input-box .pib-label{font-size:9px;color:#555;margin-bottom:4px;}
 .price-input-box input{width:100%;background:#0d0d0d;border:1.5px solid var(--gold);border-radius:6px;padding:6px 8px;font-size:14px;font-weight:800;color:var(--gold);outline:none;text-align:center;}
-.price-input-box input::placeholder{color:#444;font-size:11px;font-weight:400;}
 .badge-btn{background:#1a1a1a;color:#888;border:1.5px solid #333;padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
 .badge-btn.on{background:#1a1200;color:var(--gold);border-color:var(--gold);}
-/* ===================================== */
-
-@media(max-width:1200px){
-  .grid{grid-template-columns:repeat(4,1fr);}
-}
-@media(max-width:900px){
-  .grid{grid-template-columns:repeat(3,1fr);}
-}
+@media(max-width:1200px){.grid{grid-template-columns:repeat(4,1fr);}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr);}}
 @media(max-width:768px){
   .sb{width:0;overflow:hidden;}
   .ac{margin-left:0;}
@@ -336,51 +334,35 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
   .pprice{font-size:14px;}
   .pname{font-size:11px;}
 }
-
-/* ===== RIBBON / BADGE ===== */
 .ribbon-wrap{position:absolute;top:0;left:0;overflow:hidden;width:90px;height:90px;z-index:10;}
 .ribbon{background:linear-gradient(135deg,#cc0c39,#ff2d55);color:white;font-size:10px;font-weight:800;text-align:center;padding:5px 20px;position:absolute;top:18px;left:-20px;transform:rotate(-45deg);width:100px;box-shadow:0 2px 8px rgba(204,12,57,.5);letter-spacing:.5px;}
-
-/* ===== BUY NOW SHAKE ===== */
 @keyframes shake{0%,100%{transform:translateX(0)}10%,30%,50%,70%,90%{transform:translateX(-4px)}20%,40%,60%,80%{transform:translateX(4px)}}
 @keyframes pulse-gold{0%,100%{box-shadow:0 4px 20px #d4a01740}50%{box-shadow:0 6px 35px #d4a017cc,0 0 0 6px #d4a01720}}
 .buy-btn{width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border:none;padding:16px;border-radius:10px;font-size:17px;font-weight:900;cursor:pointer;color:#000;margin-bottom:10px;animation:pulse-gold 1.8s infinite;transition:transform .1s;letter-spacing:.3px;}
 .buy-btn:hover{transform:scale(1.02);}
 .buy-btn.shake{animation:shake .4s ease,pulse-gold 1.8s infinite;}
-
-/* ===== URGENCY BOXES ===== */
 .urgency-bar{background:linear-gradient(90deg,#1a0000,#2a0000);border:1px solid #cc0c3944;border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
 .urgency-bar .ub-icon{font-size:20px;flex-shrink:0;}
 .urgency-bar .ub-text{font-size:12px;color:#ff6b6b;font-weight:700;line-height:1.4;}
 .urgency-bar .ub-sub{font-size:10px;color:#ff4444;font-weight:400;}
-
 .stock-bar{margin-bottom:12px;}
 .stock-label{display:flex;justify-content:space-between;margin-bottom:5px;}
 .stock-label span:first-child{font-size:12px;color:#ff6b6b;font-weight:700;}
 .stock-label span:last-child{font-size:11px;color:#555;}
 .stock-track{background:#222;border-radius:20px;height:7px;overflow:hidden;}
 .stock-fill{background:linear-gradient(90deg,#ff2d55,#ff6b6b);height:100%;border-radius:20px;transition:width .3s;}
-
 .fake-sales{background:#0d1a0d;border:1px solid #1a3a1a;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#4ade80;font-weight:600;}
 .fake-sales span{color:#fff;}
-
-/* ===== DISCOUNT BADGE ===== */
 .disc-badge{display:inline-block;background:linear-gradient(135deg,#cc0c39,#ff2d55);color:white;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:800;margin-left:8px;vertical-align:middle;}
-
-/* ===== COLOR SWATCHES ===== */
 .color-opts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
 .color-opt{width:32px;height:32px;border-radius:50%;cursor:pointer;border:3px solid #333;transition:all .2s;position:relative;}
 .color-opt:hover,.color-opt.on{border-color:var(--gold);transform:scale(1.15);}
 .color-opt.on::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:white;text-shadow:0 1px 3px rgba(0,0,0,.8);}
-
-/* ===== TIMER ===== */
 .timer-box{background:linear-gradient(90deg,#1a0000,#0d0000);border:1px solid #cc0c3933;border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:12px;}
 .timer-label{font-size:11px;color:#ff6b6b;font-weight:700;white-space:nowrap;}
 .timer-digits{display:flex;gap:5px;align-items:center;}
 .td{background:#1a0000;border:1px solid #cc0c3966;border-radius:5px;padding:4px 8px;font-size:16px;font-weight:900;color:#ff4444;min-width:30px;text-align:center;}
 .tc2{color:#ff4444;font-weight:900;font-size:16px;}
-
-/* ===== VIEWERS ===== */
 .viewers-row{display:flex;align-items:center;gap:6px;font-size:11px;color:#888;margin-bottom:10px;}
 .vdot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 1s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -398,7 +380,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
       <button class="search-btn">🔍</button>
     </div>
     <div class="nav-right">
-      <span class="nav-btn" onclick="goAdmin()">⚙️ Admin</span>
       <button class="cart-btn" onclick="openCart()">🛒 Cart <span class="cart-c" id="cartN">0</span></button>
     </div>
   </div>
@@ -437,7 +418,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
   <p>📞 03145338766 &nbsp;|&nbsp; 🚚 Delivery All Over Pakistan &nbsp;|&nbsp; 💰 Cash on Delivery</p>
   <p style="margin-top:8px;color:#333;">© 2026 NestKart PK — All Rights Reserved</p>
 </footer>
-<a href="https://wa.me/923145338766" class="fwa" target="_blank">💬</a>
 <div class="chat-widget">
   <div class="chat-box" id="chatBox"><div id="chatScreen"></div></div>
   <button class="chat-toggle" onclick="toggleChat()">💬<span class="chat-notif" id="chatNotif">!</span></button>
@@ -454,7 +434,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
       <button class="search-btn">🔍</button>
     </div>
     <div class="nav-right">
-      <span class="nav-btn" onclick="goAdmin()">⚙️ Admin</span>
       <button class="cart-btn" onclick="openCart()">🛒 Cart <span class="cart-c" id="cartN2">0</span></button>
     </div>
   </div>
@@ -463,7 +442,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
   <button class="back-btn" onclick="showStore()">← Back to Store</button>
   <div id="detailContent"></div>
 </div>
-<a href="https://wa.me/923145338766" class="fwa" target="_blank">💬</a>
 </div>
 
 <!-- ORDER MODAL -->
@@ -515,8 +493,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
     </ul>
   </div>
   <div class="ac">
-
-    <!-- DASHBOARD -->
     <div id="tab-dash" class="tc on">
       <div class="atop"><h1 style="color:var(--gold);">📊 Dashboard</h1></div>
       <div class="stats">
@@ -533,8 +509,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
         <button class="ba" onclick="stab('add')" style="margin:0 auto;">➕ Product Add Karo</button>
       </div>
     </div>
-
-    <!-- ORDERS -->
     <div id="tab-orders" class="tc">
       <div class="atop"><h1 style="color:var(--gold);">📋 Customer Orders (COD)</h1></div>
       <div class="acard">
@@ -545,8 +519,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
         </div>
       </div>
     </div>
-
-    <!-- CHAT ADMIN -->
     <div id="tab-chat-a" class="tc">
       <div class="atop"><h1 style="color:var(--gold);">💬 Customer Chats</h1></div>
       <div class="chat-admin-wrap" style="padding:0;">
@@ -568,8 +540,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
         </div>
       </div>
     </div>
-
-    <!-- PRODUCTS -->
     <div id="tab-prods" class="tc">
       <div class="atop"><h1 style="color:var(--gold);">📦 Products</h1><button class="ba" onclick="stab('add')">➕ Add</button></div>
       <div class="acard">
@@ -580,23 +550,12 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
         </div>
       </div>
     </div>
-
-    <!-- ADD PRODUCT -->
     <div id="tab-add" class="tc">
       <div class="atop"><h1 id="fHead" style="color:var(--gold);">➕ Add Product</h1></div>
-
-      <!-- ===== MARKAZ AUTO IMPORTER ===== -->
       <div class="acard" style="margin-bottom:15px;">
         <div class="ac-hdr"><h3>🤖 Markaz Auto Importer</h3></div>
         <div class="af">
-
-          <!-- PRODUCT URL -->
-          <div class="fg2">
-            <label>PRODUCT URL</label>
-            <input type="text" id="maz_url" placeholder="https://daraz.pk/products/... ya Markaz URL" style="font-size:13px;">
-          </div>
-
-          <!-- COST PRICE + PROFIT ROW -->
+          <div class="fg2"><label>PRODUCT URL</label><input type="text" id="maz_url" placeholder="https://markaz.pk/products/... product URL yahan paste karo"></div>
           <div class="fr" style="margin-bottom:6px;">
             <div class="fg2">
               <label>Lागत (COST PRICE)</label>
@@ -613,38 +572,23 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
               </div>
             </div>
           </div>
-
-          <!-- FORMULA HINT -->
-          <div id="formulaHint" style="display:none;font-size:12px;color:#888;margin-bottom:14px;padding:8px 12px;background:#111;border-radius:6px;">
-            <span id="formulaText"></span>
-          </div>
-
-          <!-- PACK PRICES PREVIEW — EXACTLY LIKE SCREENSHOT -->
           <div id="pricePreviewBox" style="display:none;margin-bottom:16px;">
-            <p style="font-size:11px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;">PACK PRICES (PROFIT BHI DOUBLE/TRIPLE HOGA)</p>
+            <p style="font-size:11px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;">PACK PRICES</p>
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
               <div style="background:#0d1a0d;border:2px solid #1a3a1a;border-radius:10px;padding:14px;text-align:center;">
                 <div style="font-size:11px;color:#888;margin-bottom:6px;">Pack of 1</div>
-                <div id="pp1show" style="font-size:22px;font-weight:900;color:white;margin-bottom:4px;"></div>
-                <div id="pp1calc" style="font-size:10px;color:#555;"></div>
-                <div id="pp1profit" style="font-size:10px;color:#4ade80;font-weight:600;margin-top:2px;"></div>
+                <div id="pp1show" style="font-size:22px;font-weight:900;color:white;"></div>
               </div>
               <div style="background:#0d1a0d;border:2px solid #4ade8066;border-radius:10px;padding:14px;text-align:center;">
                 <div style="font-size:11px;color:#888;margin-bottom:6px;">Pack of 2</div>
-                <div id="pp2show" style="font-size:22px;font-weight:900;color:white;margin-bottom:4px;"></div>
-                <div id="pp2calc" style="font-size:10px;color:#555;"></div>
-                <div id="pp2profit" style="font-size:10px;color:#4ade80;font-weight:600;margin-top:2px;"></div>
+                <div id="pp2show" style="font-size:22px;font-weight:900;color:white;"></div>
               </div>
               <div style="background:#0d1a0d;border:2px solid #4ade80;border-radius:10px;padding:14px;text-align:center;">
                 <div style="font-size:11px;color:#888;margin-bottom:6px;">Pack of 3</div>
-                <div id="pp3show" style="font-size:22px;font-weight:900;color:white;margin-bottom:4px;"></div>
-                <div id="pp3calc" style="font-size:10px;color:#555;"></div>
-                <div id="pp3profit" style="font-size:10px;color:#4ade80;font-weight:600;margin-top:2px;"></div>
+                <div id="pp3show" style="font-size:22px;font-weight:900;color:white;"></div>
               </div>
             </div>
           </div>
-
-          <!-- BADGE -->
           <div class="fg2">
             <label>BADGE</label>
             <div style="display:flex;gap:8px;flex-wrap:wrap;">
@@ -656,18 +600,10 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
             </div>
             <input type="hidden" id="maz_badge" value="🔥 Hot">
           </div>
-
-          <!-- IMPORT BUTTON -->
-          <button class="bp" id="importBtn" onclick="autoImportMarkaz()" style="width:100%;font-size:15px;padding:14px;margin-top:6px;">
-            ⬇️ Import Karo
-          </button>
-
-          <!-- STATUS -->
+          <button class="bp" id="importBtn" onclick="autoImportMarkaz()" style="width:100%;font-size:15px;padding:14px;margin-top:6px;">⬇️ Import Karo</button>
           <div id="importStatus" style="display:none;margin-top:12px;background:#0d0d0d;border:1px solid #333;border-radius:10px;padding:14px;">
             <div id="importStatusText" style="font-size:13px;color:#888;text-align:center;">Processing...</div>
           </div>
-
-          <!-- PREVIEW AFTER IMPORT -->
           <div id="importPreview" style="display:none;margin-top:14px;">
             <div style="background:#0d1a0d;border:1px solid #1a3a1a;border-radius:10px;padding:14px;margin-bottom:12px;">
               <p style="font-size:12px;color:#4ade80;font-weight:700;margin-bottom:10px;">✅ Product Ready — Confirm Karo:</p>
@@ -679,7 +615,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
                   <div id="prev_sizes" style="font-size:11px;color:#888;"></div>
                 </div>
               </div>
-              <!-- FINAL PRICES CONFIRM -->
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px;">
                 <div style="text-align:center;background:#111;border-radius:6px;padding:8px;">
                   <div style="font-size:9px;color:#555;">Pack of 1</div>
@@ -704,21 +639,14 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
               <button onclick="cancelImport()" style="flex:1;background:#1a1a1a;border:1px solid #333;padding:12px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;color:#888;">❌ Cancel</button>
             </div>
           </div>
-
         </div>
       </div>
-
-      <!-- MANUAL ADD -->
       <div class="acard">
         <div class="ac-hdr"><h3>✏️ Manual Add (Advanced)</h3><button onclick="toggleManual()" id="manualToggleBtn" style="background:#333;color:#888;border:none;padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;">Show ▼</button></div>
         <div id="manualForm" style="display:none;">
         <div class="af">
           <input type="hidden" id="eid">
-          <div class="fg2">
-            <label>📸 Product Images (Up to 8 — Click slots)</label>
-            <div class="imgs-upload" id="imgsGrid"></div>
-            <p style="font-size:10px;color:#555;margin-top:4px;">Pehli image main image hogi</p>
-          </div>
+          <div class="fg2"><label>📸 Product Images (Up to 8)</label><div class="imgs-upload" id="imgsGrid"></div><p style="font-size:10px;color:#555;margin-top:4px;">Pehli image main image hogi</p></div>
           <div class="fg2"><label>📦 Product Name *</label><input type="text" id="fn" placeholder="e.g. Men's Premium Cotton T-Shirt"></div>
           <div class="fg2"><label>📂 Category</label>
             <select id="fcat" onchange="updateSizeOptions()">
@@ -728,15 +656,9 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
               <option>Beauty</option><option>Other</option>
             </select>
           </div>
-          <div class="fg2" id="sizesWrap">
-            <label>📏 Available Sizes</label>
-            <div id="sizeCheckboxes" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"></div>
-          </div>
+          <div class="fg2" id="sizesWrap"><label>📏 Available Sizes</label><div id="sizeCheckboxes" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"></div></div>
           <div class="fg2"><label>📝 Description</label><textarea id="fd" rows="4" placeholder="Product ki detail..."></textarea></div>
-          <div class="fg2">
-            <label>🖼️ Description Images (Optional)</label>
-            <div class="desc-iu" id="descImgsWrap"></div>
-          </div>
+          <div class="fg2"><label>🖼️ Description Images</label><div class="desc-iu" id="descImgsWrap"></div></div>
           <div class="fr">
             <div class="fg2"><label>💰 Pack of 1 Price *</label><input type="number" id="fp1" placeholder="1499"></div>
             <div class="fg2"><label>💰 Pack of 2 Price</label><input type="number" id="fp2" placeholder="2799"></div>
@@ -747,7 +669,7 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
           </div>
           <div class="fr">
             <div class="fg2"><label>🔖 Badge</label>
-              <select id="fbadge"><option value="🔥 Hot">🔥 Hot</option><option value="⭐ New">⭐ New</option><option value="💥 Sale">💥 Sale</option><option value="🏆 Best Seller">🏆 Best Seller</option><option value="💎 Premium">💎 Premium</option><option value="👗 Trending">👗 Trending</option></select>
+              <select id="fbadge"><option value="🔥 Hot">🔥 Hot</option><option value="⭐ New">⭐ New</option><option value="💥 Sale">💥 Sale</option><option value="🏆 Best Seller">🏆 Best Seller</option><option value="💎 Premium">💎 Premium</option></select>
             </div>
             <div class="fg2"><label>⭐ Rating</label><input type="number" id="frat" placeholder="4.5" min="1" max="5" step="0.1"></div>
           </div>
@@ -760,7 +682,6 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
         </div>
       </div>
     </div>
-
   </div>
 </div>
 </div>
@@ -817,7 +738,7 @@ const SHOE_SIZES=['36','37','38','39','40','41','42','43','44','45','46'];
 let prods=[], orders=[];
 let cart=JSON.parse(localStorage.getItem('nk3_cart')||'[]');
 let chats=JSON.parse(localStorage.getItem('nk3_chats')||'{}');
-let curCat='all', curProd=null, curPack=1, curSize='';
+let curCat='all', curProd=null, curPack=1, curSize='', curColor='';
 let prodImgs=[], descImgs=[];
 let chatOpen=false, chatSession=null, activeChatId=null;
 
@@ -830,6 +751,8 @@ async function loadFromFirebase(){
     orders=oSnap.docs.map(d=>({...d.data(),_docId:d.id}));
     orders.sort((a,b)=>b.id-a.id);
     buildCats();renderGrid(prods);updateCartCounts();
+    // ✅ FIX: Handle URL after data loads
+    handleURL();
   }catch(e){console.log('Firebase load error:',e);}
 }
 
@@ -852,28 +775,58 @@ window.addEventListener('firebaseReady',()=>{
 function saveC(){localStorage.setItem('nk3_cart',JSON.stringify(cart));}
 function saveCH(){localStorage.setItem('nk3_chats',JSON.stringify(chats));}
 
+// ✅ FIX 1: setBadge function
+function setBadge(val, el){
+  document.getElementById('maz_badge').value = val;
+  document.querySelectorAll('.badge-btn').forEach(b => b.classList.remove('on'));
+  if(el) el.classList.add('on');
+}
+
+// ✅ FIX 2: URL ROUTING — Product URLs work when shared!
+function handleURL(){
+  const params = new URLSearchParams(window.location.search);
+  const pid = params.get('p');
+  const cat = params.get('cat');
+  if(pid){
+    const tryOpen = (attempts) => {
+      const p = prods.find(x => String(x.id) === String(pid));
+      if(p){
+        openDetail(p.id);
+      } else if(attempts < 30){
+        setTimeout(() => tryOpen(attempts+1), 300);
+      }
+    };
+    tryOpen(0);
+  } else if(cat && cat !== 'all'){
+    goCat(decodeURIComponent(cat));
+  }
+}
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', function(e){
+  if(e.state){
+    if(e.state.page==='product'){ openDetail(e.state.id); }
+    else if(e.state.page==='cat'){ goCat(e.state.cat||'all'); }
+    else { showPage('storePage'); buildCats(); renderGrid(getCurProds()); }
+  } else {
+    showPage('storePage'); buildCats(); renderGrid(getCurProds());
+  }
+});
+
 function previewPrice(){
   const mp=parseInt(document.getElementById('maz_price')?.value)||0;
   const profit=parseInt(document.getElementById('maz_profit')?.value)||0;
   const box=document.getElementById('pricePreviewBox');
   if(!mp){if(box)box.style.display='none';return;}
   const p1=mp+profit;
-  const p2=p1*2;
-  const p3=p1*3;
   if(box)box.style.display='block';
-  const e1=document.getElementById('pp1show');
-  const e2=document.getElementById('pp2show');
-  const e3=document.getElementById('pp3show');
-  if(e1)e1.textContent=fmt(p1);
-  if(e2)e2.textContent=fmt(p2);
-  if(e3)e3.textContent=fmt(p3);
-  // Agar import preview visible hai toh wahan bhi update karo
-  const i1=document.getElementById('imp_p1');
-  const i2=document.getElementById('imp_p2');
-  const i3=document.getElementById('imp_p3');
-  if(i1)i1.value=p1;
-  if(i2)i2.value=p2;
-  if(i3)i3.value=p3;
+  const e=id=>document.getElementById(id);
+  if(e('pp1show'))e('pp1show').textContent=fmt(p1);
+  if(e('pp2show'))e('pp2show').textContent=fmt(p1*2);
+  if(e('pp3show'))e('pp3show').textContent=fmt(p1*3);
+  if(e('imp_p1'))e('imp_p1').value=p1;
+  if(e('imp_p2'))e('imp_p2').value=p1*2;
+  if(e('imp_p3'))e('imp_p3').value=p1*3;
 }
 
 function fmt(n){
@@ -884,13 +837,27 @@ function fmt(n){
 function stars(r){let s='';for(let i=1;i<=5;i++)s+=i<=Math.floor(parseFloat(r)||4)?'★':'☆';return s+' '+(r||4);}
 
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');}
-function showStore(){showPage('storePage');buildCats();renderGrid(getCurProds());}
+
+function showStore(){
+  // ✅ FIX: Update URL when going back to store
+  history.pushState({page:'store'}, '', window.location.pathname);
+  showPage('storePage');buildCats();renderGrid(getCurProds());
+}
+
 function goAdmin(){showPage('loginPage');}
 
 function buildCats(){
   document.getElementById('catBar').innerHTML=CATS.map(c=>`<button class="cat-pill ${curCat===c?'on':''}" onclick="goCat('${c}')">${c==='all'?'🏠 All':c}</button>`).join('');
 }
-function goCat(c){curCat=c;buildCats();document.getElementById('secTitle').innerHTML=c==='all'?'✨ <span>Featured</span> Products':`<span>${c}</span>`;renderGrid(getCurProds());}
+
+function goCat(c){
+  // ✅ FIX: Update URL when category changes
+  history.pushState({page:'cat',cat:c}, '', c==='all'?window.location.pathname:'?cat='+encodeURIComponent(c));
+  curCat=c;buildCats();
+  document.getElementById('secTitle').innerHTML=c==='all'?'✨ <span>Featured</span> Products':`<span>${c}</span>`;
+  renderGrid(getCurProds());
+}
+
 function getCurProds(){return curCat==='all'?prods:prods.filter(p=>p.cat===curCat);}
 function doSearch(){
   const q=document.getElementById('srch').value.toLowerCase();
@@ -907,17 +874,13 @@ function renderGrid(list){
     const fakeSold=8+(p.id*13)%25;
     return `
     <div class="pcard" onclick="openDetail(${p.id})">
-      <div class="pbadge" style="background:linear-gradient(90deg,#cc0c39,#ff2d55);">-${discPct}% OFF</div>
-      <div class="pimg" style="position:relative;">${p.images&&p.images[0]?`<img src="${p.images[0]}">`:(EM[p.cat]||'📦')}
-      </div>
+      <div class="pbadge">-${discPct}% OFF</div>
+      <div class="pimg">${p.images&&p.images[0]?`<img src="${p.images[0]}">`:(EM[p.cat]||'📦')}</div>
       <div class="pinfo">
         <div class="pname">${p.name}</div>
         <div class="pstars">${stars(p.rat)}</div>
         <div class="prev">(${(p.rev||0).toLocaleString()} reviews)</div>
-        <div class="pprices">
-          <span class="pprice">${fmt(p.p1)}</span>
-          <span class="pold">${fmt(fakeOp)}</span>
-        </div>
+        <div class="pprices"><span class="pprice">${fmt(p.p1)}</span><span class="pold">${fmt(fakeOp)}</span></div>
         <div style="font-size:10px;color:#ff6b6b;font-weight:600;margin-bottom:5px;">🔥 ${fakeSold} sold today</div>
         <button class="padd" onclick="event.stopPropagation();openDetail(${p.id})">🛒 Buy Now</button>
       </div>
@@ -928,6 +891,10 @@ function renderGrid(list){
 function openDetail(id){
   const p=prods.find(x=>x.id===id);if(!p)return;
   curProd=p;curPack=1;curSize=p.sizes&&p.sizes.length?p.sizes[0]:'';curColor='';
+  // ✅ FIX: Update URL — now shareable!
+  history.pushState({page:'product',id:id}, p.name+' — NestKart PK', '?p='+id);
+  // Update page title
+  document.title = p.name + ' — NestKart PK';
   showPage('detailPage');renderDetail(p,0);updateCartCounts();window.scrollTo(0,0);
 }
 
@@ -938,36 +905,22 @@ function renderDetail(p,activeImg){
   const p3=p.p3||p1*3;
   const packOpts=[{n:1,price:p1},{n:2,price:p2},{n:3,price:p3}];
   const ap=packOpts.find(x=>x.n===curPack)||packOpts[0];
-
-  // AUTO DISCOUNT — random 20-70% per product (seed by product id)
-  const discPct = 20 + ((p.id*17+31)%51); // 20 to 70, consistent per product
-  const fakeOp = Math.round(ap.price / (1 - discPct/100));
-  const savePKR = fakeOp - ap.price;
-
-  // FAKE STOCK — 3 to 12 left
-  const stockLeft = 3 + (p.id*7)%10;
-  const stockPct = Math.round((stockLeft/15)*100);
-
-  // FAKE SALES — last 2 hours
-  const fakeSold = 8 + (p.id*13)%25;
-  const fakeViewing = 15 + (p.id*9)%40;
-
-  // COLORS from product data or auto-generate
-  const COLORS = p.colors && p.colors.length ? p.colors :
-    (p.cat==='Clothing'||p.cat==='Shoes') ? ['#111','#1a1a6e','#8B0000','#2d5a27','#888'] :
-    p.cat==='Beauty' ? ['#ff9eb5','#ff6b6b','#c084fc','#fff'] : [];
-
+  const discPct=20+((p.id*17+31)%51);
+  const fakeOp=Math.round(ap.price/(1-discPct/100));
+  const savePKR=fakeOp-ap.price;
+  const stockLeft=3+(p.id*7)%10;
+  const stockPct=Math.round((stockLeft/15)*100);
+  const fakeSold=8+(p.id*13)%25;
+  const fakeViewing=15+(p.id*9)%40;
+  const COLORS=p.colors&&p.colors.length?p.colors:(p.cat==='Clothing'||p.cat==='Shoes')?['#111','#1a1a6e','#8B0000','#2d5a27','#888']:p.cat==='Beauty'?['#ff9eb5','#ff6b6b','#c084fc','#fff']:[];
   const hasSizes=p.sizes&&p.sizes.length>0;
   const hasColors=COLORS.length>0;
   const related=prods.filter(x=>x.id!==p.id&&x.cat===p.cat).slice(0,6);
-
-  // BADGE ribbon
-  const badgeText = p.badge ? p.badge.replace(/[^\w\s]/g,'').trim() : 'HOT';
+  const badgeText=p.badge?p.badge.replace(/[^\w\s]/g,'').trim():'HOT';
 
   document.getElementById('detailContent').innerHTML=`
     <div class="dgrid">
       <div>
-        <!-- IMAGE with RIBBON -->
         <div class="main-img" id="mainImg" style="position:relative;">
           ${imgs[activeImg]?`<img src="${imgs[activeImg]}">`:(EM[p.cat]||'📦')}
           <div class="ribbon-wrap"><div class="ribbon">${badgeText.toUpperCase()}</div></div>
@@ -975,31 +928,16 @@ function renderDetail(p,activeImg){
         ${imgs.length>1?`<div class="thumbs">${imgs.map((img,i)=>`<div class="thumb ${i===activeImg?'on':''}" onclick="switchImg(${p.id},${i})"><img src="${img}"></div>`).join('')}</div>`:''}
       </div>
       <div>
-        <!-- NAME -->
         <div class="d-name">${p.name}</div>
-
-        <!-- STARS + REVIEWS -->
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
           <div class="d-stars">${stars(p.rat)}</div>
           <span style="font-size:12px;color:#888;">${(p.rev||0).toLocaleString()} reviews</span>
           <span style="font-size:11px;background:#4ade8020;color:#4ade80;padding:2px 8px;border-radius:10px;font-weight:700;">✅ Verified</span>
         </div>
-
-        <!-- VIEWERS -->
-        <div class="viewers-row">
-          <div class="vdot"></div>
-          <span><strong style="color:var(--gold);">${fakeViewing}</strong> log abhi yeh product dekh rahe hain</span>
-        </div>
-
-        <!-- PRICE + DISCOUNT -->
-        <div style="margin-bottom:6px;">
-          <span class="d-price">${fmt(ap.price)}</span>
-          <span class="disc-badge">-${discPct}% OFF</span>
-        </div>
+        <div class="viewers-row"><div class="vdot"></div><span><strong style="color:var(--gold);">${fakeViewing}</strong> log abhi yeh product dekh rahe hain</span></div>
+        <div style="margin-bottom:6px;"><span class="d-price">${fmt(ap.price)}</span><span class="disc-badge">-${discPct}% OFF</span></div>
         <div class="d-old">MRP: ${fmt(fakeOp)}</div>
         <div class="d-save">💰 Aap bachao: ${fmt(savePKR)} (${discPct}% OFF)</div>
-
-        <!-- COUNTDOWN TIMER -->
         <div class="timer-box">
           <span class="timer-label">⏰ Offer khatam hogi:</span>
           <div class="timer-digits">
@@ -1008,71 +946,24 @@ function renderDetail(p,activeImg){
             <div class="td" id="t-s">00</div>
           </div>
         </div>
-
-        <!-- FAKE SALES NOTIFICATION -->
-        <div class="fake-sales">
-          🔥 Last 2 ghanton mein <span>${fakeSold} pieces</span> bik chuke hain!
-        </div>
-
-        <!-- STOCK BAR -->
+        <div class="fake-sales">🔥 Last 2 ghanton mein <span>${fakeSold} pieces</span> bik chuke hain!</div>
         <div class="stock-bar">
-          <div class="stock-label">
-            <span>🚨 Sirf ${stockLeft} bacha hai!</span>
-            <span>${stockPct}% sold</span>
-          </div>
+          <div class="stock-label"><span>🚨 Sirf ${stockLeft} bacha hai!</span><span>${stockPct}% sold</span></div>
           <div class="stock-track"><div class="stock-fill" style="width:${stockPct}%"></div></div>
         </div>
-
-        <!-- URGENCY -->
-        <div class="urgency-bar">
-          <div class="ub-icon">⚡</div>
-          <div>
-            <div class="ub-text">JALDI KARO! Stock khatam ho raha hai!</div>
-            <div class="ub-sub">Yeh product aksar out of stock ho jata hai</div>
-          </div>
-        </div>
-
-        <!-- COLORS -->
-        ${hasColors?`
-        <div class="opt-label">🎨 Color: <span style="color:var(--gold);" id="colorLabel">${curColor||'Select Karo'}</span></div>
-        <div class="color-opts">
-          ${COLORS.map((c,i)=>`<div class="color-opt ${i===0&&!curColor?'on':curColor===c?'on':''}" style="background:${c};" onclick="selectColor('${c}',this)" title="${c}"></div>`).join('')}
-        </div>`:''}
-
-        <!-- SIZES -->
-        ${hasSizes?`
-        <div class="opt-label">📏 Size: <span style="color:var(--gold);">${curSize||'Select Karo'}</span></div>
-        <div class="size-opts">${p.sizes.map(s=>`<div class="size-opt ${s===curSize?'on':''}" onclick="selectSize('${s}')">${s}</div>`).join('')}</div>`:''}
-
-        <!-- PACK OPTIONS -->
+        <div class="urgency-bar"><div class="ub-icon">⚡</div><div><div class="ub-text">JALDI KARO! Stock khatam ho raha hai!</div><div class="ub-sub">Yeh product aksar out of stock ho jata hai</div></div></div>
+        ${hasColors?`<div class="opt-label">🎨 Color: <span style="color:var(--gold);" id="colorLabel">${curColor||'Select Karo'}</span></div><div class="color-opts">${COLORS.map((c,i)=>`<div class="color-opt ${i===0&&!curColor?'on':curColor===c?'on':''}" style="background:${c};" onclick="selectColor('${c}',this)"></div>`).join('')}</div>`:''}
+        ${hasSizes?`<div class="opt-label">📏 Size: <span style="color:var(--gold);">${curSize||'Select Karo'}</span></div><div class="size-opts">${p.sizes.map(s=>`<div class="size-opt ${s===curSize?'on':''}" onclick="selectSize('${s}')">${s}</div>`).join('')}</div>`:''}
         <div class="opt-label" style="margin-top:6px;">📦 Pack Size:</div>
-        <div class="pack-opts">
-          ${packOpts.map(pk=>{
-            const pkDisc=discPct;
-            const pkFakeOp=Math.round(pk.price/(1-pkDisc/100));
-            return `<div class="pack-opt ${pk.n===curPack?'on':''}" onclick="selectPack(${p.id},${pk.n})">
-              <div class="pk-size">Pack of ${pk.n}</div>
-              <div class="pk-price">${fmt(pk.price)}</div>
-              <div style="font-size:9px;text-decoration:line-through;color:#444;">${fmt(pkFakeOp)}</div>
-            </div>`;
-          }).join('')}
-        </div>
-
-        <!-- DELIVERY INFO -->
+        <div class="pack-opts">${packOpts.map(pk=>`<div class="pack-opt ${pk.n===curPack?'on':''}" onclick="selectPack(${p.id},${pk.n})"><div class="pk-size">Pack of ${pk.n}</div><div class="pk-price">${fmt(pk.price)}</div><div style="font-size:9px;text-decoration:line-through;color:#444;">${fmt(Math.round(pk.price/(1-discPct/100)))}</div></div>`).join('')}</div>
         <div class="delivery-box">
           <p>✅ <strong>Cash on Delivery Available</strong></p>
           <p>🚚 <strong>3-6 Working Days Delivery</strong> — All Over Pakistan</p>
           <p>🔄 <strong>7 Day Easy Return</strong> Policy</p>
           <p>⭐ <strong>100% Original</strong> — Quality Guaranteed</p>
         </div>
-
-        <!-- BUY NOW BUTTON — SHAKING -->
-        <button class="buy-btn" id="buyNowBtn" onclick="openOrder(${p.id},${ap.n},${ap.price})">
-          🛒 Buy Now — Cash on Delivery — ${fmt(ap.price)}
-        </button>
+        <button class="buy-btn" id="buyNowBtn" onclick="openOrder(${p.id},${ap.n},${ap.price})">🛒 Buy Now — Cash on Delivery — ${fmt(ap.price)}</button>
         <button class="cart-add-btn" onclick="addCart(${p.id},${ap.n},${ap.price});showToast('✅ Cart mein add ho gaya!','s')">+ Add to Cart</button>
-
-        <!-- TRUST BADGES -->
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
           <div style="background:#111;border:1px solid #222;border-radius:8px;padding:8px 12px;font-size:10px;color:#888;flex:1;text-align:center;"><div style="font-size:16px;margin-bottom:2px;">🔒</div>Safe Payment</div>
           <div style="background:#111;border:1px solid #222;border-radius:8px;padding:8px 12px;font-size:10px;color:#888;flex:1;text-align:center;"><div style="font-size:16px;margin-bottom:2px;">🚚</div>Fast Delivery</div>
@@ -1081,73 +972,31 @@ function renderDetail(p,activeImg){
         </div>
       </div>
     </div>
+    ${p.desc||(p.descImgs&&p.descImgs.length)?`<div class="desc-section"><div class="desc-title">📄 Product Description</div><div class="desc-text">${(p.desc||'').replace(/\n/g,'<br>')}</div>${p.descImgs&&p.descImgs.length?`<div class="desc-imgs">${p.descImgs.map(img=>`<img class="desc-img" src="${img}">`).join('')}</div>`:''}</div>`:''}
+    ${related.length?`<div class="related-section"><div class="desc-title">🔗 Related Products</div><div class="related-grid">${related.map(r=>`<div class="rel-card" onclick="openDetail(${r.id})"><div class="rel-img">${r.images&&r.images[0]?`<img src="${r.images[0]}">`:(EM[r.cat]||'📦')}</div><div class="rel-info"><div class="rel-name">${r.name}</div><div class="rel-price">${fmt(r.p1)}</div></div></div>`).join('')}</div></div>`:''}`;
 
-    ${p.desc||(p.descImgs&&p.descImgs.length)?`
-    <div class="desc-section">
-      <div class="desc-title">📄 Product Description</div>
-      <div class="desc-text">${(p.desc||'').replace(/\n/g,'<br>')}</div>
-      ${p.descImgs&&p.descImgs.length?`<div class="desc-imgs">${p.descImgs.map(img=>`<img class="desc-img" src="${img}">`).join('')}</div>`:''}
-    </div>`:''}
-
-    ${related.length?`
-    <div class="related-section">
-      <div class="desc-title">🔗 Related Products</div>
-      <div class="related-grid">${related.map(r=>`
-        <div class="rel-card" onclick="openDetail(${r.id})">
-          <div class="rel-img">${r.images&&r.images[0]?`<img src="${r.images[0]}">`:(EM[r.cat]||'📦')}</div>
-          <div class="rel-info"><div class="rel-name">${r.name}</div><div class="rel-price">${fmt(r.p1)}</div></div>
-        </div>`).join('')}
-      </div>
-    </div>`:''}`;
-
-  // Start timer & shake button
-  startDetailTimer();
-  startBuyShake();
+  startDetailTimer();startBuyShake();
 }
 
-let curColor='';
-function selectColor(c,el){
-  curColor=c;
-  document.querySelectorAll('.color-opt').forEach(x=>x.classList.remove('on'));
-  el.classList.add('on');
-  const lbl=document.getElementById('colorLabel');
-  if(lbl)lbl.textContent=c;
-}
-
+function selectColor(c,el){curColor=c;document.querySelectorAll('.color-opt').forEach(x=>x.classList.remove('on'));el.classList.add('on');const lbl=document.getElementById('colorLabel');if(lbl)lbl.textContent=c;}
 let detailTimerInt=null;
 function startDetailTimer(){
   if(detailTimerInt)clearInterval(detailTimerInt);
-  // Random time left between 8-47 minutes
-  let secs = 480 + Math.floor(Math.random()*2340);
+  let secs=480+Math.floor(Math.random()*2340);
   function tick(){
-    const h=Math.floor(secs/3600);
-    const m=Math.floor((secs%3600)/60);
-    const s=secs%60;
-    const th=document.getElementById('t-h');
-    const tm=document.getElementById('t-m');
-    const ts=document.getElementById('t-s');
+    const h=Math.floor(secs/3600),m=Math.floor((secs%3600)/60),s=secs%60;
+    const th=document.getElementById('t-h'),tm=document.getElementById('t-m'),ts=document.getElementById('t-s');
     if(!th)return clearInterval(detailTimerInt);
-    th.textContent=String(h).padStart(2,'0');
-    tm.textContent=String(m).padStart(2,'0');
-    ts.textContent=String(s).padStart(2,'0');
-    if(secs<=0){secs=1800;}
-    secs--;
+    th.textContent=String(h).padStart(2,'0');tm.textContent=String(m).padStart(2,'0');ts.textContent=String(s).padStart(2,'0');
+    if(secs<=0)secs=1800;secs--;
   }
-  tick();
-  detailTimerInt=setInterval(tick,1000);
+  tick();detailTimerInt=setInterval(tick,1000);
 }
-
 let buyShakeInt=null;
 function startBuyShake(){
   if(buyShakeInt)clearInterval(buyShakeInt);
-  buyShakeInt=setInterval(()=>{
-    const btn=document.getElementById('buyNowBtn');
-    if(!btn){clearInterval(buyShakeInt);return;}
-    btn.classList.add('shake');
-    setTimeout(()=>btn.classList.remove('shake'),400);
-  },3000);
+  buyShakeInt=setInterval(()=>{const btn=document.getElementById('buyNowBtn');if(!btn){clearInterval(buyShakeInt);return;}btn.classList.add('shake');setTimeout(()=>btn.classList.remove('shake'),400);},3000);
 }
-
 function switchImg(id,i){const p=prods.find(x=>x.id===id);if(p)renderDetail(p,i);}
 function selectPack(id,n){curPack=n;const p=prods.find(x=>x.id===id);if(p)renderDetail(p,0);}
 function selectSize(s){curSize=s;if(curProd)renderDetail(curProd,0);}
@@ -1156,8 +1005,7 @@ function openOrder(pid,pack,price){
   const p=prods.find(x=>x.id===pid);if(!p)return;
   const sizeInfo=curSize?` (Size: ${curSize})`:'';
   document.getElementById('orderBody').innerHTML=`
-    <div class="order-sum">
-      <h4>📦 Order Summary</h4>
+    <div class="order-sum"><h4>📦 Order Summary</h4>
       <div class="osr"><span>${p.name}${sizeInfo}</span></div>
       <div class="osr"><span>Pack of ${pack}</span><span>${fmt(price)}</span></div>
       <div class="osr"><span>Delivery Charges</span><span style="color:#f59e0b;">PKR 200</span></div>
@@ -1166,7 +1014,7 @@ function openOrder(pid,pack,price){
     <div class="fg"><label>👤 Apna Naam *</label><input type="text" id="o_name" placeholder="Muhammad Ali"></div>
     <div class="fg"><label>📞 Phone Number *</label><input type="tel" id="o_phone" placeholder="03001234567"></div>
     <div class="fg"><label>🏙️ City *</label><select id="o_city"><option value="">-- City Select Karo --</option>${CITIES.map(c=>`<option>${c}</option>`).join('')}</select></div>
-    <div class="fg"><label>🏠 Pura Address *</label><textarea id="o_addr" placeholder="Ghar ka pura address, mohalla, gali..."></textarea></div>
+    <div class="fg"><label>🏠 Pura Address *</label><textarea id="o_addr" placeholder="Ghar ka pura address..."></textarea></div>
     <div class="fg"><label>📝 Note (Optional)</label><input type="text" id="o_note" placeholder="Special instruction..."></div>
     <input type="hidden" id="o_pid" value="${pid}">
     <input type="hidden" id="o_pack" value="${pack}">
@@ -1191,15 +1039,8 @@ async function placeOrder(){
   try{await window.fsAddDoc(window.fsCollection(window.db,'orders'),order);}catch(e){console.log('Order error',e);}
   document.getElementById('orderBody').innerHTML=`
     <div class="success-box">
-      <div class="si2">🎉</div>
-      <h3>Order Place Ho Gaya!</h3>
+      <div class="si2">🎉</div><h3>Order Place Ho Gaya!</h3>
       <p>Humara team aap se jald contact karega<br>Phone: <strong style="color:var(--gold);">${phone}</strong></p>
-      <div style="background:#0d0d0d;border:1px solid #333;border-radius:10px;padding:14px;margin-bottom:16px;font-size:12px;text-align:left;">
-        <div style="display:flex;justify-content:space-between;margin-bottom:5px;color:#888;"><span>Product</span><strong style="color:#fff;">${p?p.name:''}</strong></div>
-        ${size?`<div style="display:flex;justify-content:space-between;margin-bottom:5px;color:#888;"><span>Size</span><strong style="color:var(--gold);">${size}</strong></div>`:''}
-        <div style="display:flex;justify-content:space-between;margin-bottom:5px;color:#888;"><span>Amount (COD)</span><strong style="color:var(--gold);">${fmt(price)}</strong></div>
-        <div style="display:flex;justify-content:space-between;color:#888;"><span>Delivery</span><strong style="color:#4ade80;">3-6 Working Days</strong></div>
-      </div>
       <button onclick="closeOrder()" style="background:linear-gradient(90deg,var(--gold),var(--gold2));color:#000;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer;">Shopping Jari Rakho 🛍️</button>
     </div>`;
 }
@@ -1213,11 +1054,7 @@ function addCart(id,pack,price){
   else cart.push({key,id,pack,price,name:p.name,img:p.images&&p.images[0]?p.images[0]:'',cat:p.cat,size:curSize,qty:1});
   saveC();updateCartCounts();renderCart();
 }
-function updateCartCounts(){
-  const n=cart.reduce((a,x)=>a+x.qty,0);
-  document.getElementById('cartN').textContent=n;
-  const el2=document.getElementById('cartN2');if(el2)el2.textContent=n;
-}
+function updateCartCounts(){const n=cart.reduce((a,x)=>a+x.qty,0);document.getElementById('cartN').textContent=n;const el2=document.getElementById('cartN2');if(el2)el2.textContent=n;}
 function openCart(){document.getElementById('cartOv').classList.add('open');document.getElementById('cartSb').classList.add('open');renderCart();}
 function closeCart(){document.getElementById('cartOv').classList.remove('open');document.getElementById('cartSb').classList.remove('open');}
 function renderCart(){
@@ -1254,20 +1091,10 @@ function cartCheckout(){if(!cart.length)return;closeCart();const f=cart[0];curSi
 function toggleChat(){
   chatOpen=!chatOpen;
   document.getElementById('chatBox').classList.toggle('open',chatOpen);
-  if(chatOpen){
-    document.getElementById('chatNotif').classList.remove('show');
-    if(!chatSession)renderChatNameScreen();else renderChatScreen();
-  }
+  if(chatOpen){document.getElementById('chatNotif').classList.remove('show');if(!chatSession)renderChatNameScreen();else renderChatScreen();}
 }
 function renderChatNameScreen(){
-  document.getElementById('chatScreen').innerHTML=`
-    <div class="chat-name-screen">
-      <h4>💬 NestKart Support</h4>
-      <p style="font-size:11px;color:#555;margin-bottom:12px;">Apna naam aur phone darj karein</p>
-      <input type="text" id="chatName" placeholder="Apna naam...">
-      <input type="text" id="chatPhone" placeholder="Phone number...">
-      <button class="chat-start-btn" onclick="startChat()">Chat Shuru Karo →</button>
-    </div>`;
+  document.getElementById('chatScreen').innerHTML=`<div class="chat-name-screen"><h4>💬 NestKart Support</h4><p style="font-size:11px;color:#555;margin-bottom:12px;">Apna naam aur phone darj karein</p><input type="text" id="chatName" placeholder="Apna naam..."><input type="text" id="chatPhone" placeholder="Phone number..."><button class="chat-start-btn" onclick="startChat()">Chat Shuru Karo →</button></div>`;
 }
 function startChat(){
   const name=document.getElementById('chatName').value.trim();
@@ -1280,17 +1107,7 @@ function startChat(){
 }
 function renderChatScreen(){
   if(!chatSession)return;
-  document.getElementById('chatScreen').innerHTML=`
-    <div class="chat-hdr">
-      <div style="font-size:18px;">🛒</div>
-      <div class="chat-hdr-info"><h4>NestKart Support</h4><p>🟢 Online — Hum yahan hain!</p></div>
-      <button onclick="chatSession=null;renderChatNameScreen()" style="background:none;border:none;color:#555;cursor:pointer;font-size:16px;margin-left:auto;">✕</button>
-    </div>
-    <div class="chat-msgs" id="chatMsgs"></div>
-    <div class="chat-input">
-      <input type="text" id="chatIn" placeholder="Message likho..." onkeydown="if(event.key==='Enter')sendChatMsg()">
-      <button class="chat-send" onclick="sendChatMsg()">➤</button>
-    </div>`;
+  document.getElementById('chatScreen').innerHTML=`<div class="chat-hdr"><div style="font-size:18px;">🛒</div><div class="chat-hdr-info"><h4>NestKart Support</h4><p>🟢 Online — Hum yahan hain!</p></div><button onclick="chatSession=null;renderChatNameScreen()" style="background:none;border:none;color:#555;cursor:pointer;font-size:16px;margin-left:auto;">✕</button></div><div class="chat-msgs" id="chatMsgs"></div><div class="chat-input"><input type="text" id="chatIn" placeholder="Message likho..." onkeydown="if(event.key==='Enter')sendChatMsg()"><button class="chat-send" onclick="sendChatMsg()">➤</button></div>`;
   renderChatMsgs();
 }
 function renderChatMsgs(){
@@ -1306,6 +1123,49 @@ function sendChatMsg(){
   const text=inp.value.trim();if(!text)return;
   chats[chatSession.id].msgs.push({from:'customer',text,time:new Date().toLocaleTimeString()});
   saveCH();inp.value='';renderChatMsgs();updateAdminChatBadge();
+  // ✅ AI Auto Reply after 1.5 seconds
+  setTimeout(()=>aiReply(text), 1500);
+}
+
+function aiReply(userMsg){
+  if(!chatSession||!chats[chatSession.id])return;
+  const msg = userMsg.toLowerCase();
+  let reply = '';
+  // Smart keyword-based replies
+  if(msg.includes('price')||msg.includes('qeemat')||msg.includes('cost')||msg.includes('kitna'))
+    reply='💰 Aap jo product pasand karo us pe click karo — sab prices clearly likhi hain. Cash on Delivery available hai!';
+  else if(msg.includes('deliver')||msg.includes('kitne din')||msg.includes('kab'))
+    reply='🚚 Delivery 3-6 working days mein hoti hai — All Pakistan. Karachi/Lahore/Islamabad mein usually 3 din mein!';
+  else if(msg.includes('return')||msg.includes('wapas')||msg.includes('refund')||msg.includes('exchange'))
+    reply='🔄 7 din ka easy return/exchange policy hai. Koi masla ho to WhatsApp karo: 03145338766';
+  else if(msg.includes('original')||msg.includes('fake')||msg.includes('quality')||msg.includes('asli'))
+    reply='⭐ Bilkul 100% original products hain! Har product quality check ke baad ship hota hai. Guarantee!';
+  else if(msg.includes('order')||msg.includes('buy')||msg.includes('khareed')||msg.includes('purchase'))
+    reply='🛒 Order karna bahut aasan hai! Product open karo → "Buy Now" dabao → apna naam, phone, address bharo → Done! COD hoga.';
+  else if(msg.includes('size')||msg.includes('small')||msg.includes('large')||msg.includes('medium'))
+    reply='📏 Sizes product page pe clearly hoti hain. Doubt ho to ek size upar lena recommended hai. Warna exchange bhi ho sakta hai!';
+  else if(msg.includes('payment')||msg.includes('cod')||msg.includes('advance')||msg.includes('pay'))
+    reply='💵 Sirf Cash on Delivery! Delivery pe payment karo — koi advance nahi. 100% safe!';
+  else if(msg.includes('whatsapp')||msg.includes('call')||msg.includes('contact')||msg.includes('number'))
+    reply='📞 WhatsApp/Call: 03145338766
+⏰ Available: 10 AM - 10 PM (7 days)';
+  else if(msg.includes('discount')||msg.includes('sale')||msg.includes('offer')||msg.includes('coupon'))
+    reply='💥 Store mein already bohot saare products pe 20-70% OFF hai! Abhi browse karo!';
+  else if(msg.includes('hello')||msg.includes('hi ')||msg.includes('assalam')||msg.includes('helo')||msg.includes('hey'))
+    reply='Wa Alaikum Assalam! 😊 Welcome to NestKart! Kaise madad kar sakta hoon aapki?';
+  else if(msg.includes('thanks')||msg.includes('shukriya')||msg.includes('thank'))
+    reply='😊 Shukriya aapka! Khushi hui madad karke. Aur koi sawal ho to zaroor poochein!';
+  else if(msg.includes('track')||msg.includes('status')||msg.includes('parcel'))
+    reply='📦 Order status ke liye apna phone number dijiye — hum check karke bata denge!';
+  else
+    reply='🙏 Shukriya message karne ka! Hum jald reply karenge. Urgent ho to: 📞 03145338766';
+  
+  chats[chatSession.id].msgs.push({from:'admin',text:reply,time:new Date().toLocaleTimeString()});
+  saveCH();renderChatMsgs();
+  // Notify user
+  if(!chatOpen){
+    document.getElementById('chatNotif').classList.add('show');
+  }
 }
 function updateAdminChatBadge(){
   const el=document.getElementById('chatBadge');if(el)el.textContent=Object.keys(chats).length>0?Object.keys(chats).length:'';
@@ -1318,11 +1178,7 @@ function renderChatSessions(){
   wrap.innerHTML=keys.reverse().map(sid=>{
     const s=chats[sid];const last=s.msgs[s.msgs.length-1];
     const unread=s.msgs.filter(m=>m.from==='customer'&&!m.read).length;
-    return `<div class="chat-session ${activeChatId===sid?'active':''}" onclick="openAdminChat('${sid}')">
-      <div class="cs-hdr"><span class="cs-name">👤 ${s.name} ${unread>0?`<span class="cs-badge">${unread}</span>`:''}</span><span class="cs-time">${last?last.time:''}</span></div>
-      <div style="font-size:10px;color:#555;">${s.phone||''}</div>
-      <div class="cs-last">${last?last.text:''}</div>
-    </div>`;
+    return `<div class="chat-session ${activeChatId===sid?'active':''}" onclick="openAdminChat('${sid}')"><div class="cs-hdr"><span class="cs-name">👤 ${s.name} ${unread>0?`<span class="cs-badge">${unread}</span>`:''}</span><span class="cs-time">${last?last.time:''}</span></div><div style="font-size:10px;color:#555;">${s.phone||''}</div><div class="cs-last">${last?last.text:''}</div></div>`;
   }).join('');
 }
 function openAdminChat(sid){
@@ -1348,7 +1204,6 @@ function adminSend(){
   showToast('✅ Reply bheja gaya!','s');
 }
 
-// ADMIN LOGIN
 function doLogin(){
   const u=document.getElementById('lu').value,p=document.getElementById('lp').value;
   if(u==='admin'&&p==='Muqrram#786PK'){
@@ -1391,8 +1246,7 @@ function renderOrdTable(){
       <td style="max-width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${o.pname}</td>
       <td>Pack ${o.pack}${o.size?' · '+o.size:''}</td>
       <td><strong style="color:var(--gold);">${fmt(o.price)}</strong></td>
-      <td>${o.city}</td>
-      <td>${o.date}</td>
+      <td>${o.city}</td><td>${o.date}</td>
       <td><span class="${o.status==='Pending'?'bpend':o.status==='Confirmed'?'bconf':'bdel'}">${o.status}</span></td>
       <td>
         <button class="bv" onclick="viewOrder(${o.id})">👁️</button>
@@ -1412,14 +1266,14 @@ function viewOrder(id){
     <div class="od-row"><span>Product</span><span>${o.pname}</span></div>
     <div class="od-row"><span>Pack</span><span>Pack of ${o.pack}</span></div>
     ${o.size?`<div class="od-row"><span>Size</span><span style="color:var(--gold);">${o.size}</span></div>`:''}
-    <div class="od-row"><span>Amount (COD)</span><span style="color:var(--gold);font-size:15px;">${fmt(o.price)}</span></div>
+    <div class="od-row"><span>Amount</span><span style="color:var(--gold);font-size:15px;">${fmt(o.price)}</span></div>
     ${o.note?`<div class="od-row"><span>Note</span><span>${o.note}</span></div>`:''}
     <div class="od-row"><span>Date</span><span>${o.date}</span></div>
     <div class="od-row"><span>Status</span><span class="${o.status==='Pending'?'bpend':o.status==='Confirmed'?'bconf':'bdel'}">${o.status}</span></div>`;
   document.getElementById('odActions').innerHTML=`
     ${o.status==='Pending'?`<button class="bp" style="flex:1;" onclick="updStatus(${o.id},'Confirmed');closeOD()">✅ Confirm Order</button>`:''}
     ${o.status==='Confirmed'?`<button class="bp" style="flex:1;" onclick="updStatus(${o.id},'Delivered');closeOD()">📦 Mark Delivered</button>`:''}
-    <a href="https://wa.me/92${o.phone.replace(/^0/,'')}?text=Assalam+o+Alaikum+${o.name}!+Aapka+NestKart+order+(${o.pname})+confirm+ho+gaya+hai.+Total:+${fmt(o.price)}+COD.+Delivery+3-6+din+mein+hogi.+Shukriya!" target="_blank">
+    <a href="https://wa.me/92${o.phone.replace(/^0/,'')}?text=Assalam+o+Alaikum+${o.name}!+Aapka+NestKart+order+(${o.pname})+confirm+ho+gaya.+Total:+${fmt(o.price)}+COD.+3-6+din+mein+delivery+hogi.+Shukriya!" target="_blank">
       <button style="background:#25D366;color:white;border:none;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;">💬 WhatsApp</button>
     </a>`;
   document.getElementById('odOv').classList.add('open');
@@ -1427,13 +1281,7 @@ function viewOrder(id){
 function closeOD(){document.getElementById('odOv').classList.remove('open');}
 async function updStatus(id,status){
   const o=orders.find(x=>x.id===id);
-  if(o){
-    o.status=status;
-    if(o._docId){
-      try{await window.fsUpdateDoc(window.fsDoc(window.db,'orders',o._docId),{status});}catch(e){}
-    }
-    renderOrdTable();updateStats();showToast('✅ Status updated!');
-  }
+  if(o){o.status=status;if(o._docId){try{await window.fsUpdateDoc(window.fsDoc(window.db,'orders',o._docId),{status});}catch(e){}}renderOrdTable();updateStats();showToast('✅ Status updated!');}
 }
 
 function renderProdTable(){
@@ -1463,7 +1311,6 @@ function updateSizeOptions(){
   wrap.innerHTML=sizes.map(s=>`<label style="display:flex;align-items:center;gap:5px;cursor:pointer;font-size:13px;color:#ccc;"><input type="checkbox" value="${s}" style="accent-color:var(--gold);width:14px;height:14px;"> ${s}</label>`).join('');
 }
 function getSelectedSizes(){return Array.from(document.querySelectorAll('#sizeCheckboxes input[type=checkbox]:checked')).map(c=>c.value);}
-
 function initAddForm(){prodImgs=[];descImgs=[];renderImgSlots();renderDescSlots();updateSizeOptions();}
 
 function renderImgSlots(){
@@ -1477,7 +1324,7 @@ function renderImgSlots(){
   }
   if(!document.getElementById('imgUrlWrap')){
     const div=document.createElement('div');div.id='imgUrlWrap';div.style.cssText='margin-top:10px;display:flex;gap:8px;';
-    div.innerHTML=`<input type="text" id="imgUrlIn" placeholder="Ya Markaz image URL yahan paste karo..." style="flex:1;padding:9px 13px;background:#0d0d0d;border:1.5px solid #333;border-radius:8px;color:white;font-size:12px;outline:none;"><button onclick="addImgUrl()" style="background:var(--gold);border:none;padding:9px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;color:#000;white-space:nowrap;">+ Add URL</button>`;
+    div.innerHTML=`<input type="text" id="imgUrlIn" placeholder="Ya image URL yahan paste karo..." style="flex:1;padding:9px 13px;background:#0d0d0d;border:1.5px solid #333;border-radius:8px;color:white;font-size:12px;outline:none;"><button onclick="addImgUrl()" style="background:var(--gold);border:none;padding:9px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;color:#000;white-space:nowrap;">+ Add URL</button>`;
     wrap.parentNode.insertBefore(div,wrap.nextSibling);
   }
 }
@@ -1523,14 +1370,8 @@ async function saveProd(){
     sizes:getSelectedSizes(),
   };
   try{
-    if(eid){
-      const p=prods.find(x=>x.id==eid);
-      if(p&&p._docId)await window.fsUpdateDoc(window.fsDoc(window.db,'products',p._docId),obj);
-      showToast('✅ Product update ho gaya!');
-    }else{
-      await window.fsAddDoc(window.fsCollection(window.db,'products'),obj);
-      showToast('✅ Product add ho gaya!');
-    }
+    if(eid){const p=prods.find(x=>x.id==eid);if(p&&p._docId)await window.fsUpdateDoc(window.fsDoc(window.db,'products',p._docId),obj);showToast('✅ Product update ho gaya!');}
+    else{await window.fsAddDoc(window.fsCollection(window.db,'products'),obj);showToast('✅ Product add ho gaya!');}
     resetForm();initAddForm();
   }catch(e){showToast('❌ Error: '+e.message,'e');}
 }
@@ -1541,8 +1382,7 @@ function resetForm(){
   prodImgs=[];descImgs=[];renderImgSlots();renderDescSlots();
 }
 function toggleManual(){
-  const f=document.getElementById('manualForm');
-  const btn=document.getElementById('manualToggleBtn');
+  const f=document.getElementById('manualForm');const btn=document.getElementById('manualToggleBtn');
   if(f.style.display==='none'){f.style.display='block';btn.textContent='Hide ▲';}
   else{f.style.display='none';btn.textContent='Show ▼';}
 }
@@ -1566,29 +1406,12 @@ function closeEdit(){document.getElementById('editMov').classList.remove('open')
 async function saveEdit(){
   const id=parseInt(document.getElementById('eeid').value);
   const p=prods.find(x=>x.id===id);if(!p)return;
-  const updated={...p,
-    name:document.getElementById('en').value,
-    desc:document.getElementById('ed').value,
-    p1:parseInt(document.getElementById('ep1').value),
-    p2:document.getElementById('ep2').value?parseInt(document.getElementById('ep2').value):null,
-    p3:document.getElementById('ep3').value?parseInt(document.getElementById('ep3').value):null,
-    op:document.getElementById('eop').value||null,
-    cat:document.getElementById('ecat').value,
-    badge:document.getElementById('ebadge').value,
-    rat:parseFloat(document.getElementById('erat').value)||4.5,
-    rev:parseInt(document.getElementById('erev').value)||0
-  };
-  try{
-    if(p._docId)await window.fsUpdateDoc(window.fsDoc(window.db,'products',p._docId),updated);
-    renderProdTable();closeEdit();showToast('✅ Updated!');
-  }catch(e){showToast('❌ Error: '+e.message,'e');}
+  const updated={...p,name:document.getElementById('en').value,desc:document.getElementById('ed').value,p1:parseInt(document.getElementById('ep1').value),p2:document.getElementById('ep2').value?parseInt(document.getElementById('ep2').value):null,p3:document.getElementById('ep3').value?parseInt(document.getElementById('ep3').value):null,op:document.getElementById('eop').value||null,cat:document.getElementById('ecat').value,badge:document.getElementById('ebadge').value,rat:parseFloat(document.getElementById('erat').value)||4.5,rev:parseInt(document.getElementById('erev').value)||0};
+  try{if(p._docId)await window.fsUpdateDoc(window.fsDoc(window.db,'products',p._docId),updated);renderProdTable();closeEdit();showToast('✅ Updated!');}catch(e){showToast('❌ Error: '+e.message,'e');}
 }
 async function delProd(docId,id){
   if(!confirm('Delete karo?'))return;
-  try{
-    if(docId)await window.fsDeleteDoc(window.fsDoc(window.db,'products',docId));
-    renderProdTable();updateStats();showToast('🗑️ Deleted!');
-  }catch(e){showToast('❌ Error: '+e.message,'e');}
+  try{if(docId)await window.fsDeleteDoc(window.fsDoc(window.db,'products',docId));renderProdTable();updateStats();showToast('🗑️ Deleted!');}catch(e){showToast('❌ Error: '+e.message,'e');}
 }
 
 function showToast(msg,type='s'){
@@ -1616,9 +1439,7 @@ async function autoImportMarkaz(){
     const html=await resp.text();
     const parser=new DOMParser();
     const doc=parser.parseFromString(html,'text/html');
-    let title=doc.querySelector('meta[property="og:title"]')?.getAttribute('content')||
-      doc.querySelector('h1')?.textContent?.trim()||
-      url.split('/').slice(-2,-1)[0].split('-').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
+    let title=doc.querySelector('meta[property="og:title"]')?.getAttribute('content')||doc.querySelector('h1')?.textContent?.trim()||url.split('/').slice(-2,-1)[0].split('-').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
     title=title.replace(/\s+/g,' ').trim();
     const imgs=[...doc.querySelectorAll('meta[property="og:image"]')].map(m=>m.content).filter(Boolean);
     const imgs2=[...doc.querySelectorAll('img')].map(i=>i.src||i.getAttribute('src')||'').filter(s=>s&&s.includes('http')&&(s.includes('cdn')||s.includes('product')||s.includes('upload'))&&!s.includes('logo')&&!s.includes('icon'));
@@ -1627,24 +1448,11 @@ async function autoImportMarkaz(){
     desc=desc.replace(/\s+/g,' ').trim().substring(0,600);
     const cat=autoDetectCategory(title);
     const sizes=autoDetectSizes(cat,title);
+    const mazPrice=parseInt(document.getElementById('maz_price')?.value)||0;
+    const profitVal=parseInt(document.getElementById('maz_profit')?.value)||200;
+    const p1=mazPrice>0?mazPrice+profitVal:0;
 
-    // ===== SIRF TITLE, IMAGES, DESC, CAT SAVE KARO — PRICES NAHI =====
-    pendingImportData={
-      id:Date.now(),
-      name:title,
-      desc:desc||title+' — Premium quality. Fast delivery all over Pakistan. Cash on Delivery available.',
-      descImgs:[],
-      images:allImgs,
-      p1:0,  // User khud bharega
-      p2:null, // User khud bharega
-      p3:null, // User khud bharega
-      op:null,
-      cat,badge,
-      rat:parseFloat((4+Math.random()*0.9).toFixed(1)),
-      rev:Math.floor(50+Math.random()*400),
-      sizes
-    };
-    // ================================================================
+    pendingImportData={id:Date.now(),name:title,desc:desc||title+' — Premium quality. Fast delivery all over Pakistan. Cash on Delivery available.',descImgs:[],images:allImgs,p1,p2:p1*2,p3:p1*3,op:Math.round(p1*1.4),cat,badge,rat:parseFloat((4+Math.random()*0.9).toFixed(1)),rev:Math.floor(50+Math.random()*400),sizes};
 
     document.getElementById('importStatus').style.display='none';
     document.getElementById('importPreview').style.display='block';
@@ -1652,65 +1460,36 @@ async function autoImportMarkaz(){
     document.getElementById('prev_title').textContent=title;
     document.getElementById('prev_cat').textContent='📂 '+cat+(sizes.length?' | 📏 '+sizes.join(', '):'');
     document.getElementById('prev_desc').textContent=(desc||'').substring(0,150)+(desc.length>150?'...':'');
-
-    // Price fields clear rakho — user khud bhare
-    document.getElementById('imp_p1').value='';
-    document.getElementById('imp_p2').value='';
-    document.getElementById('imp_p3').value='';
-
-    // Pack 1 ke liye hint show karo agar markaz price enter ki thi
-    const mazPrice=parseInt(document.getElementById('maz_price')?.value)||0;
-    const profit=parseInt(document.getElementById('maz_profit')?.value)||200;
-    if(mazPrice>0){
-      document.getElementById('imp_p1').placeholder=`Suggested: ${mazPrice+profit}`;
-    }
-
-    showToast('✅ Import ready! Prices likho!','s');
+    document.getElementById('imp_p1_show').textContent=fmt(p1);
+    document.getElementById('imp_p2_show').textContent=fmt(p1*2);
+    document.getElementById('imp_p3_show').textContent=fmt(p1*3);
+    document.getElementById('imp_p1').value=p1;
+    document.getElementById('imp_p2').value=p1*2;
+    document.getElementById('imp_p3').value=p1*3;
+    showToast('✅ Import ready! Save karo!','s');
   }catch(e){
     document.getElementById('importStatusText').textContent='❌ Error: '+e.message;
     document.getElementById('importStatusText').style.color='#ef4444';
   }
   document.getElementById('importBtn').disabled=false;
-  document.getElementById('importBtn').textContent='🤖 Auto Import Karo!';
+  document.getElementById('importBtn').textContent='⬇️ Import Karo';
 }
 
 async function confirmImport(){
   if(!pendingImportData)return;
-
-  // ===== PRICES INPUT FIELDS SE LO =====
-  const p1=parseInt(document.getElementById('imp_p1').value)||0;
-  const p2=document.getElementById('imp_p2').value?parseInt(document.getElementById('imp_p2').value):null;
-  const p3=document.getElementById('imp_p3').value?parseInt(document.getElementById('imp_p3').value):null;
-
-  if(!p1||p1<=0){
-    showToast('❌ Pack of 1 ki price zaroori hai!','e');
-    document.getElementById('imp_p1').focus();
-    document.getElementById('imp_p1').style.border='2px solid #ef4444';
-    return;
-  }
-  // =====================================
-
-  pendingImportData.p1=p1;
-  pendingImportData.p2=p2;
-  pendingImportData.p3=p3;
-  pendingImportData.op=Math.round(p1*1.4);
-
+  const p1=parseInt(document.getElementById('imp_p1').value)||pendingImportData.p1||0;
+  if(!p1||p1<=0){showToast('❌ Pehle price aur profit daalo!','e');document.getElementById('maz_price').focus();return;}
+  pendingImportData.p1=p1;pendingImportData.p2=p1*2;pendingImportData.p3=p1*3;pendingImportData.op=Math.round(p1*1.4);
   try{
     await window.fsAddDoc(window.fsCollection(window.db,'products'),pendingImportData);
     showToast('✅ Product import ho gaya!','s');
-    document.getElementById('maz_url').value='';
-    document.getElementById('maz_price').value='';
-    document.getElementById('importPreview').style.display='none';
-    document.getElementById('pricePreviewBox').style.display='none';
+    document.getElementById('maz_url').value='';document.getElementById('maz_price').value='';
+    document.getElementById('importPreview').style.display='none';document.getElementById('pricePreviewBox').style.display='none';
     pendingImportData=null;
   }catch(e){showToast('❌ Error: '+e.message,'e');}
 }
 
-function cancelImport(){
-  pendingImportData=null;
-  document.getElementById('importPreview').style.display='none';
-  document.getElementById('maz_url').value='';
-}
+function cancelImport(){pendingImportData=null;document.getElementById('importPreview').style.display='none';document.getElementById('maz_url').value='';}
 
 function autoDetectCategory(t){
   t=(t||'').toLowerCase();
@@ -1722,7 +1501,6 @@ function autoDetectCategory(t){
   if(t.includes('pan')||t.includes('knife')||t.includes('cooker')||t.includes('blender')||t.includes('kettle')||t.includes('kitchen')||t.includes('chopper'))return'Kitchen Tools';
   if(t.includes('organizer')||t.includes('storage')||t.includes('rack')||t.includes('holder')||t.includes('basket')||t.includes('shelf'))return'Organizers';
   if(t.includes('clean')||t.includes('mop')||t.includes('broom')||t.includes('vacuum'))return'Cleaning';
-  if(t.includes('bag')||t.includes('purse')||t.includes('wallet')||t.includes('decor')||t.includes('vase')||t.includes('tote'))return'Home Decor';
   return'Other';
 }
 function autoDetectSizes(cat,t){
