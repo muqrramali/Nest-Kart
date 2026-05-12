@@ -91,8 +91,8 @@ input,select,textarea,button{font-family:'Poppins',sans-serif;}
 .sec-hdr h2{font-size:20px;font-weight:800;color:white;}
 .sec-hdr h2 span{color:var(--gold);}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-.pcard{background:linear-gradient(145deg,#1a1a1a,#111);border-radius:12px;border:1px solid #222;overflow:hidden;cursor:pointer;transition:all .3s;position:relative;}
-.pcard:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 8px 30px #d4a01730;}
+.pcard{background:linear-gradient(145deg,#1a1a1a,#111);border-radius:14px;border:1px solid #1e1e1e;overflow:hidden;cursor:pointer;transition:transform .3s,border .3s,box-shadow .3s;position:relative;opacity:1 !important;}
+.pcard:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 40px #d4a01730;}
 .pbadge{position:absolute;top:10px;left:10px;background:linear-gradient(90deg,#cc0c39,#ff2d55);color:white;padding:3px 10px;border-radius:4px;font-size:10px;font-weight:700;z-index:2;}
 .pimg{width:100%;height:190px;background:#0d0d0d;display:flex;align-items:center;justify-content:center;font-size:60px;overflow:hidden;position:relative;}
 .pimg img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
@@ -450,16 +450,14 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
 .ts-text strong{color:var(--gold);display:block;font-size:12px;}
 
 /* ══ NEWSLETTER ══ */
-.newsletter{background:linear-gradient(135deg,#1a0f00,#0d0d0d);
-  border:1px solid #d4a01730;border-radius:16px;padding:30px;text-align:center;margin:20px 0;}
+
 .newsletter h3{font-size:20px;font-weight:900;color:white;margin-bottom:6px;}
 .newsletter p{font-size:13px;color:#666;margin-bottom:18px;}
-.nl-form{display:flex;gap:8px;max-width:400px;margin:0 auto;}
+
 .nl-form input{flex:1;padding:11px 16px;background:#111;border:1.5px solid #333;
   border-radius:8px;color:white;font-size:13px;outline:none;}
 .nl-form input:focus{border-color:var(--gold);}
-.nl-btn{background:linear-gradient(90deg,var(--gold),var(--gold2));color:#000;padding:11px 20px;
-  border:none;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;}
+
 
 /* ══ REVIEW STARS ══ */
 .prating{display:flex;align-items:center;gap:4px;margin-bottom:4px;}
@@ -477,8 +475,130 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
 @media(max-width:600px){
   .cat-grid{grid-template-columns:repeat(4,1fr);}
   .flash-bar{flex-direction:column;align-items:flex-start;}
-  .nl-form{flex-direction:column;}
+  
 }
+
+/* ══ ANNOUNCEMENT TICKER ══ */
+.ticker-wrap{background:linear-gradient(90deg,#7c0000,#c00c30,#7c0000);
+  padding:9px 0;overflow:hidden;white-space:nowrap;position:relative;}
+.ticker-track{display:flex;width:max-content;animation:ticker 30s linear infinite;}
+.ticker-track:hover{animation-play-state:paused;}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:6px;padding:0 32px;
+  font-size:12px;font-weight:700;color:white;letter-spacing:.3px;}
+.ticker-sep{color:rgba(255,255,255,.3);}
+
+/* ══ VERIFIED BADGES ══ */
+.trust-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+  padding:16px 20px;background:#0a0a0a;border-bottom:1px solid #1a1a1a;}
+.tb{display:flex;align-items:center;gap:7px;background:#111;border:1px solid #1e1e1e;
+  border-radius:30px;padding:7px 16px;}
+.tb-icon{font-size:16px;}
+.tb-text{font-size:11px;color:#888;font-weight:600;}
+.tb-text strong{color:white;display:block;font-size:12px;}
+
+/* ══ PRODUCT CARD ══ */
+.pcard{background:linear-gradient(145deg,#141414,#0f0f0f);border-radius:14px;border:1px solid #1e1e1e;overflow:hidden;cursor:pointer;transition:all .3s;position:relative;}
+.pcard:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 40px #d4a01725;}
+.pimg{width:100%;height:200px;background:#0a0a0a;display:flex;align-items:center;
+  justify-content:center;overflow:hidden;position:relative;}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.pcard:hover .pimg img{transform:scale(1.06);}
+.p-discount-tag{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#c00,#ff2d55);
+  color:white;padding:4px 10px;border-radius:6px;font-size:10px;font-weight:900;z-index:3;}
+.p-hot-tag{position:absolute;top:10px;right:10px;background:#1a1200;border:1px solid #d4a01760;
+  color:var(--gold);padding:3px 9px;border-radius:6px;font-size:9px;font-weight:800;z-index:3;}
+.pinfo{padding:12px 13px;}
+.pname{font-size:12px;font-weight:700;color:#e0e0e0;margin-bottom:5px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.45;}
+.p-stars-row{display:flex;align-items:center;gap:5px;margin-bottom:6px;}
+.p-stars{color:#f59e0b;font-size:11px;letter-spacing:-1px;}
+.p-revs{font-size:10px;color:#555;}
+.p-verified{font-size:9px;color:#22c55e;font-weight:700;}
+.p-price-row{display:flex;align-items:baseline;gap:7px;margin-bottom:6px;flex-wrap:wrap;}
+.p-price{font-size:18px;font-weight:900;color:var(--gold);}
+.p-old{font-size:11px;color:#333;text-decoration:line-through;}
+.p-save{font-size:10px;color:#22c55e;font-weight:700;}
+.p-sold{font-size:10px;color:#ff6b6b;font-weight:700;margin-bottom:7px;}
+.p-buy-btn{width:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));
+  border:none;padding:9px;border-radius:8px;font-size:12px;font-weight:800;
+  cursor:pointer;color:#000;transition:opacity .2s;}
+.p-buy-btn:hover{opacity:.88;}
+
+/* ══ SECTION HEADER ══ */
+.sec-hdr{display:flex;justify-content:space-between;align-items:center;
+  padding:20px 0 14px;}
+.sec-hdr h2{font-size:20px;font-weight:900;color:white;}
+.sec-hdr h2 span{color:var(--gold);}
+.sec-hdr-right{display:flex;align-items:center;gap:10px;}
+.prod-count-badge{background:#1a1200;border:1px solid #d4a01730;color:var(--gold);
+  padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;}
+
+/* ══ CAT PILL FILTER ══ */
+.nav-cats{background:#0a0a0a;padding:8px 20px;display:flex;gap:6px;
+  overflow-x:auto;border-top:1px solid #161616;border-bottom:1px solid #161616;}
+.nav-cats::-webkit-scrollbar{display:none;}
+.cat-pill{color:#666;background:none;border:1px solid #1e1e1e;padding:6px 16px;
+  font-size:11px;cursor:pointer;border-radius:20px;white-space:nowrap;
+  transition:all .2s;font-weight:600;}
+.cat-pill:hover,.cat-pill.on{border-color:var(--gold);color:var(--gold);
+  background:#1a1200;}
+
+/* ══ EMPTY STATE ══ */
+.empty-grid{grid-column:1/-1;text-align:center;padding:70px 20px;}
+.empty-grid .ei{font-size:56px;margin-bottom:14px;opacity:.3;}
+.empty-grid p{font-size:14px;color:#333;font-weight:600;}
+
+/* ══ WHATSAPP FLOAT ══ */
+.wa-float{position:fixed;bottom:22px;right:22px;background:#25D366;color:white;
+  width:54px;height:54px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:24px;text-decoration:none;z-index:500;
+  box-shadow:0 4px 20px rgba(37,211,102,.5);animation:wa-pulse 2.5s infinite;}
+@keyframes wa-pulse{0%,100%{transform:scale(1);box-shadow:0 4px 20px rgba(37,211,102,.4)}
+  50%{transform:scale(1.08);box-shadow:0 6px 30px rgba(37,211,102,.7)}}
+
+/* ══ CHAT WIDGET POSITION ══ */
+.chat-widget{position:fixed;bottom:84px;right:22px;z-index:600;}
+.chat-toggle{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;
+  width:52px;height:52px;border-radius:50%;border:none;font-size:22px;cursor:pointer;
+  box-shadow:0 4px 18px #d4a01760;display:flex;align-items:center;justify-content:center;}
+.chat-notif{position:absolute;top:-4px;right:-4px;background:#ef4444;color:white;
+  border-radius:50%;width:18px;height:18px;font-size:10px;font-weight:800;
+  display:none;align-items:center;justify-content:center;}
+.chat-notif.show{display:flex;}
+
+/* ══ LIVE BUYERS POPUP ══ */
+.live-popup{position:fixed;bottom:160px;left:18px;background:#111;
+  border:1px solid #d4a01730;border-radius:12px;padding:11px 15px;
+  display:flex;align-items:center;gap:11px;z-index:690;
+  transform:translateX(-300px);transition:transform .5s ease;max-width:270px;
+  box-shadow:0 6px 24px rgba(0,0,0,.6);}
+.live-popup.show{transform:translateX(0);}
+.lp-dot{width:9px;height:9px;background:#22c55e;border-radius:50%;
+  box-shadow:0 0 8px #22c55e;animation:blink 1s infinite;flex-shrink:0;}
+.lp-text{font-size:11px;color:#ccc;line-height:1.5;}
+.lp-text strong{color:white;}
+.lp-text small{color:#555;font-size:10px;}
+
+/* ══ FOOTER ══ */
+footer{background:#080808;border-top:1px solid #161616;padding:36px 20px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;
+  grid-template-columns:1fr 1fr 1fr;gap:30px;}
+@media(max-width:600px){.footer-inner{grid-template-columns:1fr;gap:20px;}}
+.f-col h4{font-size:13px;font-weight:800;color:var(--gold);margin-bottom:12px;}
+.f-col p,.f-col a{font-size:12px;color:#444;display:block;margin-bottom:6px;
+  text-decoration:none;transition:color .2s;}
+.f-col a:hover{color:var(--gold);}
+.f-bottom{text-align:center;padding-top:24px;margin-top:24px;
+  border-top:1px solid #161616;font-size:11px;color:#333;}
+
+/* ══ SCROLL REVEAL ══ */
+
+
+@media(max-width:1200px){.grid{grid-template-columns:repeat(4,1fr);}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .pimg{height:160px;}.pinfo{padding:8px 10px;}.p-price{font-size:15px;}}
 </style>
 </head>
 <body>
@@ -504,6 +624,29 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
   <button class="ann-close" onclick="document.getElementById('annBar').style.display='none'">✕</button>
 </div>
 
+<!-- LIVE TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">🚚 FREE Delivery on orders above PKR 2000</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">💰 Cash on Delivery — Poora Pakistan</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">⭐ 50,000+ Happy Customers</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">🔄 7 Day Easy Return Policy</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">🛡️ 100% Original Products</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">📞 Support: 03145338766</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">🎁 Special Discounts on Bulk Orders</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">⚡ Same Day Dispatch Before 2 PM</span><span class="ticker-sep">|</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item">🚚 FREE Delivery on orders above PKR 2000</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">💰 Cash on Delivery — Poora Pakistan</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">⭐ 50,000+ Happy Customers</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">🔄 7 Day Easy Return Policy</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">🛡️ 100% Original Products</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">📞 Support: 03145338766</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">🎁 Special Discounts on Bulk Orders</span><span class="ticker-sep">|</span>
+    <span class="ticker-item">⚡ Same Day Dispatch Before 2 PM</span><span class="ticker-sep">|</span>
+  </div>
+</div>
+
 <div class="hero">
   <div class="hero-content">
     <div class="hero-tag">✨ PAKISTAN KA #1 LUXURY STORE</div>
@@ -521,82 +664,82 @@ footer p{color:#444;font-size:12px;margin-bottom:4px;}
     </div>
   </div>
 </div>
-<div class="trust-strip">
-  <div class="ts-item"><div class="ts-icon">🚚</div><div class="ts-text"><strong>3-6 Days Delivery</strong>All Pakistan — PKR 200</div></div>
-  <div class="ts-item"><div class="ts-icon">💰</div><div class="ts-text"><strong>Cash on Delivery</strong>Pay when it arrives</div></div>
-  <div class="ts-item"><div class="ts-icon">🔄</div><div class="ts-text"><strong>Easy Returns</strong>7 day hassle-free</div></div>
-  <div class="ts-item"><div class="ts-icon">🛡️</div><div class="ts-text"><strong>100% Original</strong>Quality guaranteed</div></div>
-  <div class="ts-item"><div class="ts-icon">⭐</div><div class="ts-text"><strong>50,000+ Happy</strong>Customers</div></div>
+<!-- TRUST BADGES -->
+<div class="trust-badges">
+  <div class="tb"><div class="tb-icon">🚚</div><div class="tb-text"><strong>Fast Delivery</strong>3-6 Days All Pakistan</div></div>
+  <div class="tb"><div class="tb-icon">💰</div><div class="tb-text"><strong>Cash on Delivery</strong>Pay when you receive</div></div>
+  <div class="tb"><div class="tb-icon">🛡️</div><div class="tb-text"><strong>100% Original</strong>Quality Guaranteed</div></div>
+  <div class="tb"><div class="tb-icon">🔄</div><div class="tb-text"><strong>Easy Returns</strong>7 Day Policy</div></div>
+  <div class="tb"><div class="tb-icon">⭐</div><div class="tb-text"><strong>Trusted Store</strong>50,000+ Orders</div></div>
 </div>
+
 <div class="store-wrap" id="prods">
 
-  <!-- CATEGORY QUICK ACCESS -->
-  <div class="sec-title">
-    <div class="sec-title-left"><h2>🏪 Shop By <span>Category</span></h2></div>
-  </div>
-  <div class="cat-grid" id="catGrid"></div>
-
-  <!-- FLASH SALE -->
-  <div class="flash-bar">
-    <div class="flash-left">
-      <div class="flash-icon">⚡</div>
-      <div class="flash-text">
-        <h3>FLASH SALE — Aaj Ka Offer!</h3>
-        <p>Limited time — stock khatam hone se pehle order karo!</p>
-      </div>
-    </div>
-    <div class="flash-timer">
-      <div class="ft-box"><div class="ft-num" id="fh">00</div><div class="ft-label">Hours</div></div>
-      <div class="ft-sep">:</div>
-      <div class="ft-box"><div class="ft-num" id="fm">00</div><div class="ft-label">Mins</div></div>
-      <div class="ft-sep">:</div>
-      <div class="ft-box"><div class="ft-num" id="fs">00</div><div class="ft-label">Secs</div></div>
-    </div>
+  <!-- CATEGORY PILLS -->
+  <div class="sec-hdr" style="padding-top:22px;">
+    <h2 id="secTitle">✨ <span>Featured</span> Products</h2>
+    <span id="prodCountTxt" style="font-size:12px;color:#555;"></span>
   </div>
 
-  <!-- ALL PRODUCTS GRID -->
-  <div class="sec-title">
-    <div class="sec-title-left">
-      <h2 id="secTitle">✨ <span>Featured</span> Products</h2>
-    </div>
-    <span id="prodCount2" style="font-size:12px;color:#555;"></span>
-  </div>
-
-  <!-- SKELETON LOADER -->
-  <div class="grid" id="skelGrid" style="display:none;">
-    ${[...Array(10)].map(()=>`<div class="skel-card"><div class="skel-img skeleton"></div><div class="skel-line skeleton"></div><div class="skel-line short skeleton"></div><div class="skel-btn skeleton"></div></div>`).join('')}
-  </div>
-
-  <div class="grid" id="grid"></div>
-
-  <!-- NEWSLETTER -->
-  <div class="newsletter">
-    <h3>📧 Special Offers Pao — Email Pe!</h3>
-    <p>Exclusive deals, new arrivals & flash sales — sabse pehle aapko!</p>
-    <div class="nl-form">
-      <input type="email" id="nlEmail" placeholder="Apni email daalo...">
-      <button class="nl-btn" onclick="subNewsletter()">Subscribe 🎁</button>
+  <!-- PRODUCT GRID -->
+  <div class="grid" id="grid">
+    <!-- Loading state -->
+    <div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#333;">
+      <div style="font-size:40px;margin-bottom:12px;">⏳</div>
+      <p style="font-size:14px;">Products load ho rahe hain...</p>
     </div>
   </div>
 
 </div>
 <footer>
-  <div class="f-logo">Nest<span>Kart</span> PK</div>
-  <p>📞 03145338766 &nbsp;|&nbsp; 🚚 Delivery All Over Pakistan &nbsp;|&nbsp; 💰 Cash on Delivery</p>
-  <p style="margin-top:8px;color:#333;">© 2026 NestKart PK — All Rights Reserved</p>
+  <div class="footer-inner">
+    <div class="f-col">
+      <div style="font-size:22px;font-weight:900;color:white;margin-bottom:10px;">Nest<span style="color:var(--gold);">Kart</span> PK</div>
+      <p>Pakistan ka #1 trusted online store. Premium quality products with Cash on Delivery.</p>
+      <p style="margin-top:10px;">📞 <a href="tel:03145338766">03145338766</a></p>
+      <p>💬 <a href="https://wa.me/923145338766" target="_blank">WhatsApp Us</a></p>
+    </div>
+    <div class="f-col">
+      <h4>🛒 Quick Links</h4>
+      <a onclick="goCat('Kitchen Tools')">Kitchen Tools</a>
+      <a onclick="goCat('Gadgets')">Gadgets</a>
+      <a onclick="goCat('Clothing')">Clothing</a>
+      <a onclick="goCat('Home Decor')">Home Decor</a>
+      <a onclick="goCat('Beauty')">Beauty</a>
+      <a onclick="goCat('Electronics')">Electronics</a>
+      <a onclick="goCat('Shoes')">Shoes</a>
+    </div>
+    <div class="f-col">
+      <h4>ℹ️ Customer Info</h4>
+      <p>🚚 Delivery: 3-6 Working Days</p>
+      <p>💰 Payment: Cash on Delivery Only</p>
+      <p>🔄 Returns: 7 Day Easy Return</p>
+      <p>📦 Packaging: Safe & Secure</p>
+      <p style="margin-top:12px;color:#555;">Delivery charges: PKR 200 All Pakistan</p>
+    </div>
+  </div>
+  <div class="f-bottom">
+    © 2026 NestKart PK — All Rights Reserved &nbsp;|&nbsp; Made with ❤️ for Pakistan
+  </div>
 </footer>
+<!-- LIVE BUYERS POPUP -->
+<div class="live-popup" id="livePopup">
+  <div class="lp-dot"></div>
+  <div class="lp-text">
+    <div><strong id="lpName">Ali</strong> ne abhi order kiya!</div>
+    <div id="lpProd" style="color:var(--gold);font-size:10px;margin-top:1px;"></div>
+    <small id="lpTime">2 minute pehle</small>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/923145338766" class="wa-float" target="_blank">💬</a>
+
 <div class="chat-widget">
   <div class="chat-box" id="chatBox"><div id="chatScreen"></div></div>
   <button class="chat-toggle" onclick="toggleChat()">💬<span class="chat-notif" id="chatNotif">!</span></button>
 </div>
-<div class="sp-popup" id="spPopup">
-  <div class="sp-avatar" id="spAvatar">👤</div>
-  <div class="sp-text">
-    <div><strong id="spName">Ahmed</strong> ne abhi order kiya!</div>
-    <div id="spProduct" style="color:var(--gold);font-size:10px;"></div>
-    <div class="sp-time" id="spTime">2 minute pehle</div>
-  </div>
-</div>
+
 
 </div>
 
@@ -926,10 +1069,10 @@ async function loadFromFirebase(){
     const oSnap=await window.fsDocs(window.fsCollection(window.db,'orders'));
     orders=oSnap.docs.map(d=>({...d.data(),_docId:d.id}));
     orders.sort((a,b)=>b.id-a.id);
-    buildCats();renderGrid(prods);renderSections();updateCartCounts();
+    buildCats();renderGrid(prods);updateCartCounts();updateProdCount();
     handleURL();
     // Social proof popup
-    setTimeout(startSocialProof, 4000);
+
   }catch(e){console.log('Firebase load error:',e);}
 }
 
@@ -938,8 +1081,7 @@ function initFirebase(){
   loadFromFirebase();
   window.fsOnSnapshot(window.fsCollection(window.db,'products'),snap=>{
     prods=snap.docs.map(d=>({...d.data(),_docId:d.id}));
-    renderGrid(getCurProds());
-    renderSections();
+    renderGrid(getCurProds());updateProdCount();
     if(document.getElementById('prodTable'))renderProdTable();
     updateStats();
   });
@@ -1036,11 +1178,12 @@ function buildCats(){
 }
 
 function goCat(c){
-  // ✅ FIX: Update URL when category changes
   history.pushState({page:'cat',cat:c}, '', c==='all'?window.location.pathname:'?cat='+encodeURIComponent(c));
   curCat=c;buildCats();
-  document.getElementById('secTitle').innerHTML=c==='all'?'✨ <span>Featured</span> Products':`<span>${c}</span>`;
+  const titleEl=document.getElementById('secTitle');
+  if(titleEl) titleEl.innerHTML=c==='all'?'✨ <span>Featured</span> Products':`<span>${c}</span>`;
   renderGrid(getCurProds());
+  updateProdCount();
 }
 
 function getCurProds(){return curCat==='all'?prods:prods.filter(p=>p.cat===curCat);}
@@ -1050,27 +1193,49 @@ function doSearch(){
 }
 function doSearchVal(q){renderGrid(q?prods.filter(p=>p.name.toLowerCase().includes(q.toLowerCase())):getCurProds());}
 
+function updateProdCount(){
+  const el=document.getElementById('prodCountTxt');
+  if(el){
+    const list=getCurProds();
+    el.textContent=list.length>0?list.length+' products':'';
+  }
+}
+
 function renderGrid(list){
   const g=document.getElementById('grid');
-  if(!list.length){g.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px;color:#333;"><div style="font-size:60px;margin-bottom:10px;">📦</div><p>Koi product nahi mila</p></div>';return;}
+  if(!g)return;
+  if(!list||!list.length){
+    g.innerHTML='<div class="empty-grid"><div class="ei">📦</div><p>Koi product nahi mila</p></div>';
+    return;
+  }
   g.innerHTML=list.map(p=>{
     const discPct=20+((p.id*17+31)%51);
-    const fakeOp=Math.round(p.p1/(1-discPct/100));
-    const fakeSold=8+(p.id*13)%25;
-    return `
-    <div class="pcard" onclick="openDetail(${p.id})">
-      <div class="pbadge">-${discPct}% OFF</div>
-      <div class="pimg">${p.images&&p.images[0]?`<img src="${p.images[0]}">`:(EM[p.cat]||'📦')}</div>
+    const fakeOp=Math.round((p.p1||0)/(1-discPct/100));
+    const fakeSold=8+((p.id||0)*13)%25;
+    const img=p.images&&p.images.length&&p.images[0]?p.images[0]:'';
+    const rat=parseFloat(p.rat)||4.5;
+    const revs=parseInt(p.rev)||0;
+    return `<div class="pcard" onclick="openDetail(${p.id})" style="opacity:1;">
+      <div class="p-discount-tag">-${discPct}% OFF</div>
+      ${p.badge?`<div class="p-hot-tag">${p.badge}</div>`:''}
+      <div class="pimg">${img?`<img src="${img}" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=font-size:50px;text-align:center;padding:50px>${EM[p.cat]||'📦'}</div>'">`:(EM[p.cat]||'📦')}</div>
       <div class="pinfo">
-        <div class="pname">${p.name}</div>
-        <div class="pstars">${stars(p.rat)}</div>
-        <div class="prev">(${(p.rev||0).toLocaleString()} reviews)</div>
-        <div class="pprices"><span class="pprice">${fmt(p.p1)}</span><span class="pold">${fmt(fakeOp)}</span></div>
-        <div style="font-size:10px;color:#ff6b6b;font-weight:600;margin-bottom:5px;">🔥 ${fakeSold} sold today</div>
-        <button class="padd" onclick="event.stopPropagation();openDetail(${p.id})">🛒 Buy Now</button>
+        <div class="pname">${p.name||''}</div>
+        <div class="p-stars-row">
+          <span class="p-stars">${'★'.repeat(Math.floor(rat))}${'☆'.repeat(5-Math.floor(rat))}</span>
+          <span class="p-revs">${rat} (${revs.toLocaleString()})</span>
+          <span class="p-verified">✅ Verified</span>
+        </div>
+        <div class="p-price-row">
+          <span class="p-price">${fmt(p.p1)}</span>
+          <span class="p-old">${fmt(fakeOp)}</span>
+        </div>
+        <div class="p-sold">🔥 ${fakeSold} sold today</div>
+        <button class="p-buy-btn" onclick="event.stopPropagation();openDetail(${p.id})">🛒 Order Now — COD</button>
       </div>
     </div>`;
   }).join('');
+  updateProdCount();
 }
 
 function openDetail(id){
@@ -1693,6 +1858,28 @@ function autoDetectSizes(cat,t){
   if(cat==='Shoes')return['37','38','39','40','41','42','43'];
   return[];
 }
+
+// ══ LIVE BUYER POPUP ══
+const LP_NAMES=['Ahmed','Sara','Usman','Fatima','Ali','Maria','Hassan','Ayesha','Bilal','Zara','Imran','Nadia'];
+const LP_PRODS=['Vegetable Chopper','Smart Watch','Silk Abaya','Kitchen Knife Set','LED Strip Lights','Yoga Mat','Pressure Cooker','Hair Dryer','Men T-Shirt','Face Serum'];
+let lpTimer=null;
+function showLivePopup(){
+  const name=LP_NAMES[Math.floor(Math.random()*LP_NAMES.length)];
+  const prod=LP_PRODS[Math.floor(Math.random()*LP_PRODS.length)];
+  const mins=Math.floor(1+Math.random()*8);
+  const el=document.getElementById('livePopup');
+  if(!el)return;
+  document.getElementById('lpName').textContent=name;
+  document.getElementById('lpProd').textContent=prod+' order kiya';
+  document.getElementById('lpTime').textContent=mins+' minute pehle';
+  el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),4000);
+}
+function startLivePopups(){
+  showLivePopup();
+  lpTimer=setInterval(showLivePopup, 12000);
+}
+setTimeout(startLivePopups, 6000);
 
 // INIT
 buildCats();renderGrid(prods);updateCartCounts();
