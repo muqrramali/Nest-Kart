@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NestKart — Pakistan's #1 Luxury Store</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0015'/><text x='32' y='30' font-family='Arial Black' font-size='18' font-weight='900' fill='%23a78bfa' text-anchor='middle'>Nest</text><text x='32' y='50' font-family='Arial Black' font-size='18' font-weight='900' fill='%23f472b6' text-anchor='middle'>Kart</text></svg>">
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
   import { getFirestore, collection, addDoc, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
@@ -825,12 +826,23 @@ window.addEventListener('fbReady',()=>{
     renderFlashSection(); // Refresh flash sale if any
     const stdEl=document.getElementById('soldToday');
     if(stdEl)stdEl.textContent=Math.floor(prods.length*3.7+189);
+    // ✅ Check if URL has a product ID — open that product directly
+    checkUrlRouting();
   });
 });
 
 // ═══ PAGES ═══
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
-function showStore(){showPage('storePage');buildCats();renderGrid(getCurProds());}
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function showStore(){
+  showPage('storePage');
+  buildCats();renderGrid(getCurProds());
+  // Clear URL
+  history.pushState({},'',window.location.pathname);
+}
 
 // ═══ CATEGORIES ═══
 function buildCats(){
@@ -930,7 +942,7 @@ function renderGrid(list){
       <div class="disc-sticker"><div class="disc-sticker-inner">${disc}%<span>OFF</span></div></div>
       ${p.badge?`<div class="badge-ribb ${badgeClass}">${p.badge}</div>`:''}
       <div class="pimg-wrap" onclick="openDetail(${p.id})">
-        ${p.images&&p.images[0]?`<img src="${p.images[0]}" loading="lazy" alt="${p.name}">`:`<div class="peph">${EM[p.cat]||'📦'}</div>`}
+        ${p.images&&p.images[0]&&p.images[0].startsWith('http')?`<img src="${p.images[0]}" loading="lazy" alt="${p.name}" onerror="this.parentElement.innerHTML='<div class=peph>${EM[p.cat]||\'📦\'}</div>'">`:`<div class="peph">${EM[p.cat]||'📦'}</div>`}
         <button class="pwish ${isW(p.id)?'on':''}" onclick="event.stopPropagation();tWish(${p.id})">${isW(p.id)?'♥':'♡'}</button>
         <div class="pviewers"><span class="vd"></span>${vw} viewing</div>
         <div class="psold-badge">🔥 ${s5} sold · 5h</div>
@@ -997,6 +1009,10 @@ function openDetail(id){
   cProd=p;cPack=1;cQty=1;cImg=0;cSize=p.sizes&&p.sizes.length?p.sizes[0]:'';
   document.getElementById('brdC').textContent=p.cat;
   document.getElementById('brdP').textContent=p.name;
+  // Update URL so it can be shared/bookmarked
+  const slug=p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').substring(0,50);
+  history.pushState({prodId:id},'',`?product=${id}&name=${slug}`);
+  document.title=`${p.name} — NestKart`;
   showPage('detailPage');renderDetail();updCC();updWB();
 }
 function renderDetail(){
@@ -1017,7 +1033,7 @@ function renderDetail(){
   <div>
     <div class="dmai" id="dmi">
       <div class="disc-big">${disc}%<span class="offs">OFF</span></div>
-      ${imgs[cImg]?`<img src="${imgs[cImg]}" alt="${p.name}">`:`<div style="font-size:90px;opacity:.25;">${EM[p.cat]||'📦'}</div>`}
+      ${imgs[cImg]&&imgs[cImg].startsWith('http')?`<img src="${imgs[cImg]}" alt="${p.name}" onerror="this.parentElement.innerHTML='<div style=font-size:90px;opacity:.2>${EM[p.cat]||\'📦\'}</div>'">`:`<div style="font-size:90px;opacity:.2;">${EM[p.cat]||'📦'}</div>`}
     </div>
     ${imgs.length>1?`<div class="dthumbs">${imgs.map((img,i)=>`<div class="dthumb ${i===cImg?'on':''}" onclick="swImg(${i})"><img src="${img}"></div>`).join('')}</div>`:''}
   </div>
@@ -1438,9 +1454,42 @@ function get12hSold(p){
   return 30+((seed*13+41)%171); // 30 to 200
 }
 
+// ═══ URL ROUTING — Product URL se direct open ═══
+function checkUrlRouting(){
+  const params=new URLSearchParams(window.location.search);
+  const prodId=params.get('product');
+  if(prodId&&prods.length){
+    const id=parseInt(prodId);
+    const p=prods.find(x=>x.id===id);
+    if(p){openDetail(id);return true;}
+  }
+  return false;
+}
+
+// Browser back/forward button support
+window.addEventListener('popstate',(e)=>{
+  if(e.state&&e.state.prodId){
+    const p=prods.find(x=>x.id===e.state.prodId);
+    if(p){
+      cProd=p;cPack=1;cQty=1;cImg=0;cSize=p.sizes&&p.sizes.length?p.sizes[0]:'';
+      document.getElementById('brdC').textContent=p.cat;
+      document.getElementById('brdP').textContent=p.name;
+      document.title=`${p.name} — NestKart`;
+      showPage('detailPage');renderDetail();updCC();updWB();
+    }
+  } else {
+    document.title="NestKart — Pakistan's #1 Luxury Store";
+    showPage('storePage');buildCats();renderGrid(getCurProds());
+  }
+});
+
 // INIT
 buildCats();renderCatCards();renderGrid(prods);updCC();updWB();
 renderFlashSection();
+
+// Check URL after products load — handled in Firebase callback
+// Also check immediately for cached data
+setTimeout(()=>{if(prods.length)checkUrlRouting();},500);
 </script>
 </body>
 </html>
